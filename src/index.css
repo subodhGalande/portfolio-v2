@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply bg-black;
+    @apply text-white;
+  }
+}
+@layer components {
+  .btn-primary {
+    @apply py-4 px-10 bg-slate-200 text-slate-800 text-base uppercase font-semibold rounded-lg shadow-md  focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75;
+  }
+}

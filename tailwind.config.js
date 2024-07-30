@@ -10,6 +10,9 @@ export default {
         heading: "Author, ui-serif",
         sans: "Roboto, ui-serif",
       },
+      colors: {
+        grey: "#b3b3b3",
+      },
     },
   },
   plugins: [],

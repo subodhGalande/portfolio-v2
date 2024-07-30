@@ -1,17 +1,23 @@
 const Hero = () => {
   return (
     <>
-      <main className=" h-hero-height w-full flex justify-center items-center">
-        <article className="flex flex-col text-slate-300 text-center">
-          <p className="text-lg my-2">Hey, I'm Subodh!</p>
-          <h1 className="text-5xl my-4 max-w-lg mx-auto font-bold uppercase font-heading ">
-            I bring ideas to life with
-            <span className="text-white"> code</span> .
+      <main className=" h-[150vh] w-full flex justify-center items-center">
+        <article className="flex flex-col text-grey text-center">
+          <p className="text-base">Hey, I'm Subodh!</p>
+          <h1 className="text-4xl mt-4 max-w-lg mx-auto font-bold uppercase font-heading ">
+            I bring ideas
           </h1>
-          <p className="text-lg my-4">
-            I’m a 24-year-old Frontend developer with over a year of experience.
+          <h1 className="text-4xl leading-[1.2em] max-w-lg mx-auto font-bold uppercase font-heading ">
+            to life with
+            <span className="text-white"> code</span>.
+          </h1>
+
+          <p className="text-base my-4 pb-6">
+            I'm a 24-year-old UI/UX designer with over 5 years of experience in
+            creating and maintaining design systems.
           </p>
-          <button className="btn-primary w-fit mx-auto my-6">
+
+          <button className="btn-primary w-fit mx-auto  ">
             Download Resume
           </button>
         </article>

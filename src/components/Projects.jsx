@@ -1,6 +1,6 @@
 import ProjectCard from "./elements/ProjectCard";
 
-const Techstack = () => {
+const Projects = () => {
   return (
     <>
       <div className="flex flex-col justify-between text-grey">
@@ -11,11 +11,13 @@ const Techstack = () => {
           Here are few of my projects, feel free to share your feedbacks.
         </p>
       </div>
-      <div>
+      <div className="mt-11">
+        <ProjectCard />
+        <ProjectCard />
         <ProjectCard />
       </div>
     </>
   );
 };
 
-export default Techstack;
+export default Projects;

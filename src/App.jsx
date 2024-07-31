@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import Hero from "./components/Hero";
-import Techstack from "./components/TechStack";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <div className=" mx-auto px-7">
         <Hero />
-        <Techstack />
+        <Projects />
       </div>
     </>
   );

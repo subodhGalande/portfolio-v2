@@ -11,7 +11,7 @@ const Projects = () => {
           Here are few of my projects, feel free to share your feedbacks.
         </p>
       </div>
-      <div className="mt-11">
+      <div className="mt-11 flex flex-col gap-10">
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />

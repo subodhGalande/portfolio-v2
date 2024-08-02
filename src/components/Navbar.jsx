@@ -1,7 +1,11 @@
 import React from "react";
 import { useState } from "react";
 const Navbar = () => {
-  const links = ["Work", "Projects", "Connect", "Resume"];
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -58,18 +62,11 @@ const Navbar = () => {
         {isOpen && (
           <nav className=" sm:hidden relative w-full  text-grey pt-2 rounded-xl flex justify-between items-center">
             <div className=" flex flex-col justify-center px-2 h-11/12">
-              <a href="#home" className="text-base py-4">
-                Home
-              </a>
-              <a href="#about" className="text-base py-4">
-                About
-              </a>
-              <a href="#services" className="text-base py-4">
-                Services
-              </a>
-              <a href="#contact" className="text-base py-4">
-                Contact
-              </a>
+              {links.map((item, index) => (
+                <a href={item.path} key={index} className="text-base pt-4">
+                  {item.name}
+                </a>
+              ))}
             </div>
           </nav>
         )}

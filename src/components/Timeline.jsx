@@ -18,7 +18,7 @@ const experiences = [
 const Timeline = () => {
   return (
     <>
-      <div className="ml-4 mt-10">
+      <div className=" mt-10">
         {/* <ol className=" relative flex flex-col w-10/12 justify-between items-center mx-auto border-s px-4 mt-10 border-grey/10">
           <li className="mb-10 ms-6   ">
             <span className=" absolute flex items-center justify-center w-4 h-4 bg-grey brightness-50  rounded-full -start-2 ring-black "></span>
@@ -72,7 +72,7 @@ const Timeline = () => {
             </li>
           ))}
         </ol> */}
-        <ul className=" ml-4 flex flex-col mx-auto">
+        <ul className=" flex flex-col mx-auto">
           <li className=" pl-10 relative border-l  border-white/20 w-full  ">
             <div className=" absolute flex items-center justify-center w-4 h-4 bg-white brightness-50  rounded-full -start-2 mt-2 ring-black ring-8 "></div>{" "}
             <div className="flex flex-col gap-4">

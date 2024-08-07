@@ -11,7 +11,7 @@ const Experience = () => {
           Designing wasn’t a linear career; these were my stepping stones.
         </p>
       </div>
-      <div className="mx-auto w-10/12">
+      <div className="mx-auto w-full">
         <Timeline />
       </div>
     </>

@@ -4,6 +4,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Experience from "./components/elements/experinces";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Projects />
         <Experience />
       </div>
+      <Footer />
     </>
   );
 }

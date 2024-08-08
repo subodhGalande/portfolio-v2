@@ -13,8 +13,6 @@ const Projects = () => {
       </div>
       <div className="mt-11 flex flex-col gap-10">
         <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
       </div>
     </>
   );

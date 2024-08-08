@@ -1,3 +1,6 @@
+import { HiMenuAlt3 } from "react-icons/hi";
+import { IoMdClose } from "react-icons/io";
+
 import React from "react";
 import { useState } from "react";
 const Navbar = () => {
@@ -20,40 +23,16 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex justify-between items-center">
           {" "}
-          <div className="text-xl font-bold">Logo</div>
+          <div className="text-xl bg-black p-2 rounded-lg font-mono"> SG </div>
           {/* Hamburger Icon */}
           <button
             onClick={toggleMenu}
             className="sm:hidden flex items-center justify-center w-8 h-8"
           >
             {isOpen ? (
-              <svg
-                className="h-6 w-6 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <IoMdClose className="h-6 w-6" />
             ) : (
-              <svg
-                className="h-6 w-6 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
+              <HiMenuAlt3 className="h-6 w-6" />
             )}
           </button>
         </div>

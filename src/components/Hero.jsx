@@ -2,26 +2,23 @@ const Hero = () => {
   return (
     <>
       <main className=" h-screen w-full flex justify-center items-center">
-        <article className="flex gap-4 flex-col justify-between text-grey text-center">
-          <p className="text-base">
+        <article className="flex sm:mt-20 gap-4 sm:gap-5 flex-col justify-between text-grey text-center">
+          <p className="text-base sm:text-xl">
             Hey,{" "}
-            <span className="font-base font-sans font-medium text-lg">
+            <strong className="font-base sm:text-2xl font-sans font-medium text-lg">
               I'm Subodh!
-            </span>{" "}
+            </strong>{" "}
           </p>
-          <div>
-            <h1 className="text-4xl max-w-lg mx-auto font-bold uppercase font-heading leading-9 tracking-tight ">
-              I bring ideas to life with
-              <span className="text-white"> code</span>.
-            </h1>
-          </div>
 
-          <p className="text-base pb-5 leading-6 ">
+          <h1 className="text-4xl  sm:text-8xl max-w-4xl mx-auto font-bold uppercase font-heading leading-9 tracking-tight sm:tracking-normal ">
+            I bring ideas to life with
+            <strong className="text-white"> code</strong>.
+          </h1>
+          <p className="text-base sm:text-xl max-w-2xl mx-auto pb-5 sm:pb-10 leading-6 ">
             I'm a 24-year-old UI/UX designer with over 5 years of experience in
             creating and maintaining design systems.
           </p>
-
-          <button className="btn-primary w-fit mx-auto  ">
+          <button className="btn-primary sm:text-xl sm:px-8 sm:py-4 w-fit mx-auto  ">
             Download Resume
           </button>
         </article>

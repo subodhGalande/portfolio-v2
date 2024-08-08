@@ -10,7 +10,7 @@
 }
 @layer components {
   .btn-primary {
-    @apply py-3 px-8  bg-grey text-black text-base uppercase font-semibold rounded-xl;
+    @apply py-3 px-8 sm:text-lg bg-grey text-black text-base uppercase font-semibold rounded-xl;
   }
   .btn-icon {
     @apply py-3 px-3 bg-grey text-black rounded-xl;

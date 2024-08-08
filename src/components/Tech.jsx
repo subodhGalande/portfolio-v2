@@ -1,62 +1,63 @@
 import { AiOutlineJavaScript } from "react-icons/ai";
 import { DiIonic, DiReact } from "react-icons/di";
 import { FaGitAlt, FaLinux } from "react-icons/fa6";
-import { FiFramer } from "react-icons/fi";
 
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiFramer } from "react-icons/si";
+
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 const Techstack = () => {
   const technologies = [
     {
       title: "Javascript",
-      logo: <AiOutlineJavaScript className="w-11 h-11" />,
+      logo: <AiOutlineJavaScript className="w-11 h-11 sm:w-14 sm:h-14" />,
     },
     {
       title: "React Js",
-      logo: <DiReact className="w-14 h-14" />,
+      logo: <DiReact className="w-14 h-14 sm:h-20 sm:w-20" />,
     },
     {
       title: "Ionic Framework",
-      logo: <DiIonic className="w-16 h-16" />,
+      logo: <DiIonic className="w-16 h-16 sm:w-24 sm:h-24" />,
     },
     {
       title: "Tailwind CSS",
-      logo: <RiTailwindCssFill className="w-12 h-12" />,
+      logo: <RiTailwindCssFill className="w-12 h-12 sm:w-14 sm:h-14" />,
     },
     {
       title: "Git",
-      logo: <FaGitAlt className="w-11 h-11" />,
+      logo: <FaGitAlt className="w-11 h-11 sm:w-14 sm:h-14" />,
     },
     {
       title: "Linux",
-      logo: <FaLinux className="w-11 h-10" />,
+      logo: <FaLinux className="w-11 h-10 sm:w-14 sm:h-12" />,
     },
     {
       title: "Framer Motion",
-      logo: <SiFramer className="w-10 h-10" />,
+      logo: <TbBrandFramerMotion className="w-10 h-10 sm:w-12 sm:h-12" />,
     },
   ];
   return (
     <>
-      <div className="flex flex-col justify-between mb-24 text-grey">
-        <h1 className="text-4xl text-center max-w-lg mx-auto font-bold uppercase font-heading leading-9 tracking-tight">
-          I WISH I HAD DOCUMENTED ALL MY PROJECTS LIKE THIS.
+      <div className="flex sm:w-full sm:h-screen flex-col justify-center items-center mb-24 text-grey">
+        <h1 className="text-4xl text-center  sm:text-7xl max-w-5xl mx-auto font-bold uppercase font-heading leading-9 tracking-tight sm:tracking-normal">
+          SPENT A FORTUNE ON COFFEE TO Learn THESE
+          <strong className="text-white"> Skills</strong>.
         </h1>
-        <p className="text-lg leading-7 text-center pt-6">
+        <p className="text-lg leading-7 sm:text-2xl  text-center pt-6">
           Here are few of my projects, feel free to share your feedbacks.
         </p>
 
-        <div className="flex flex-wrap gap-8 justify-center mt-10">
+        <div className="flex flex-wrap gap-8 justify-center mt-10 sm:mt-16">
           {technologies.map((tech, index) => (
             <div
               key={index}
               className=" flex flex-col justify-center items-center"
             >
-              <div className=" rounded-full flex justify-center items-center bg-white/5 h-28 w-28">
+              <div className=" rounded-full flex justify-center items-center bg-white/5 h-28 w-28 sm:h-36 sm:w-36">
                 {tech.logo}
               </div>
-              <p className="text-center font-heading font-medium text-sm mt-2">
+              <p className="text-center sm:text-lg font-heading font-medium text-sm mt-2">
                 {" "}
                 {tech.title}{" "}
               </p>

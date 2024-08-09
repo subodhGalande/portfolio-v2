@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`z-10 fixed sm:w-1/2 mx-auto top-0 left-0 right-0 bg-white/5 backdrop-blur-lg w-11/12 max-w-6xl px-8 py-4 sm:py-3 rounded-xl my-4 sm:mt-10 text-white`}
+        className={`z-10 fixed md:w-3/4 lg:w-1/2 mx-auto top-0 left-0 right-0 bg-white/5 backdrop-blur-lg w-11/12 max-w-6xl px-8 py-4 sm:py-2 rounded-xl my-4 sm:mt-10 text-white`}
       >
         <div className="flex justify-between items-center">
           <div className="text-xl font-semibold bg-black p-2 sm:ml-3 rounded-lg font-heading">
@@ -41,7 +41,7 @@ const Navbar = () => {
 
           <button
             onClick={toggleMenu}
-            className="md:hidden flex items-center justify-center w-8 h-8"
+            className="sm:hidden flex items-center justify-center w-8 h-8"
           >
             {isOpen ? (
               <IoMdClose className="h-6 w-6" />

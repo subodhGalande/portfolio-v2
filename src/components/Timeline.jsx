@@ -14,6 +14,12 @@ const experiences = [
     duration: "(Jan '24 - Mar '24)",
     desc: "Surrounded with Web 3 people, excited to work in same domain. If Web 2, remote opportunities with product-focused teams makes me smile.",
   },
+  {
+    role: "Design Lead",
+    orgName: "NFT Project",
+    duration: "(Jan '24 - Mar '24)",
+    desc: "Surrounded with Web 3 people, excited to work in same domain. If Web 2, remote opportunities with product-focused teams makes me smile.",
+  },
 ];
 
 const Timeline = () => {
@@ -73,11 +79,11 @@ const Timeline = () => {
             </li>
           ))}
         </ol> */}
-        <ul className=" flex flex-col mx-auto">
-          <li className=" pl-10 relative border-l  border-white/20 w-full  ">
+        <ul className=" flex flex-col ">
+          <li className=" pl-10 relative border-l border-white/20 w-full sm:w-1/2 sm:self-end sm:px-14 ">
             <div className=" absolute flex items-center justify-center w-4 h-4 bg-white brightness-50  rounded-full -start-2 mt-2 ring-black ring-8 "></div>{" "}
             <div className="flex flex-col gap-4">
-              <h3 className=" font-sans font-medium text-2xl text-white">
+              <h3 className=" font-sans font-medium text-2xl text-white md:text-3xl">
                 Open to work
               </h3>
               <div className="flex flex-row items-center gap-2 mb-2">
@@ -87,7 +93,7 @@ const Timeline = () => {
                   <FaLinkedinIn className="h-5 w-6" />{" "}
                 </button>
               </div>
-              <p className=" font-sans text-base mb-6 text-grey">
+              <p className=" font-sans text-base mb-6 text-grey md:text-lg">
                 Surrounded with Web 3 people, excited to work in same domain. If
                 Web 2, remote opportunities with product-focused teams makes me
                 smile.
@@ -97,18 +103,29 @@ const Timeline = () => {
           {experiences.map((exp, index) => (
             <li
               key={index}
-              className=" w-full pl-10 relative last:border-0 border-l border-white/20 "
+              className={`w-full relative pl-10 border-l sm:border-0 last:border-0 
+         ${
+           index % 2 === 0
+             ? `sm:border-r sm:text-right`
+             : `sm:border-l sm:self-end`
+         }  sm:w-1/2 sm:px-14  border-white/20`}
             >
-              <div className=" absolute mt-2 items-center justify-center w-4 h-4 bg-white brightness-50  rounded-full -left-2 ring-black ring-8 "></div>{" "}
+              <div
+                className={`${
+                  index % 2 === 0
+                    ? `  absolute mt-2 items-center justify-center w-4 h-4 bg-white brightness-50 -start-2 sm:start-auto rounded-full sm:-end-[.6rem]`
+                    : ` absolute mt-2 items-center justify-center w-4 h-4 bg-white brightness-50  -start-2 rounded-full sm:-start-[.5rem] sm:visible`
+                }  ring-black ring-8 `}
+              ></div>{" "}
               <div className="flex flex-col gap-4">
-                <h3 className=" font-sans font-medium text-2xl text-white">
+                <h3 className=" font-sans font-medium text-2xl text-white md:text-3xl">
                   {exp.role}
                 </h3>
                 <h2 className="text-grey -mt-2 font-sans font-medium text-base">
                   {exp.orgName} {exp.duration}
                 </h2>
 
-                <p className=" font-sans text-base mb-6 text-grey">
+                <p className=" font-sans text-base mb-6 text-grey md:text-lg">
                   {exp.desc}
                 </p>
               </div>

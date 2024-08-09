@@ -10,15 +10,15 @@ const Techstack = () => {
   const technologies = [
     {
       title: "Javascript",
-      logo: <AiOutlineJavaScript className="w-11 h-11 sm:w-14 sm:h-14" />,
+      logo: <AiOutlineJavaScript className="w-11 h-11 sm:w-12 sm:h-12" />,
     },
     {
       title: "React Js",
-      logo: <DiReact className="w-14 h-14 sm:h-20 sm:w-20" />,
+      logo: <DiReact className="w-14 h-14 sm:h-16 sm:w-16" />,
     },
     {
       title: "Ionic Framework",
-      logo: <DiIonic className="w-16 h-16 sm:w-24 sm:h-24" />,
+      logo: <DiIonic className="w-16 h-16 sm:w-20 sm:h-20" />,
     },
     {
       title: "Tailwind CSS",
@@ -39,12 +39,12 @@ const Techstack = () => {
   ];
   return (
     <>
-      <div className="flex sm:w-full sm:h-screen flex-col justify-center items-center mb-24 text-grey">
-        <h1 className="text-4xl text-center  sm:text-7xl max-w-5xl mx-auto font-bold uppercase font-heading leading-9 tracking-tight sm:tracking-normal">
+      <div className="flex lg:w-full lg:h-screen flex-col justify-center items-center mb-24 text-grey">
+        <h1 className="heading">
           SPENT A FORTUNE ON COFFEE TO Learn THESE
           <strong className="text-white"> Skills</strong>.
         </h1>
-        <p className="text-lg leading-7 sm:text-2xl  text-center pt-6">
+        <p className="subheading">
           Here are few of my projects, feel free to share your feedbacks.
         </p>
 
@@ -54,7 +54,7 @@ const Techstack = () => {
               key={index}
               className=" flex flex-col justify-center items-center"
             >
-              <div className=" rounded-full flex justify-center items-center bg-white/5 h-28 w-28 sm:h-36 sm:w-36">
+              <div className=" rounded-full flex justify-center items-center bg-white/5 h-28 w-28 sm:h-32 sm:w-32">
                 {tech.logo}
               </div>
               <p className="text-center sm:text-lg font-heading font-medium text-sm mt-2">

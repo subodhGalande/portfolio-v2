@@ -3,15 +3,16 @@ import Timeline from "../Timeline";
 const Experience = () => {
   return (
     <>
-      <div className="flex mx-auto flex-col justify-between text-grey mt-36">
-        <h1 className="text-4xl text-center max-w-lg mx-auto font-bold uppercase font-heading leading-9 tracking-tight">
-          SHAPED BY MY JOURNEY, NEVER FORGETTING WHERE I STARTED.
+      <div className="flex mx-auto flex-col justify-between text-grey mt-44">
+        <h1 className="heading">
+          SHAPED BY <strong className="text-white">MY JOURNEY</strong>, NEVER
+          FORGETTING WHERE I STARTED.
         </h1>
-        <p className="text-lg leading-7 text-center pt-6">
+        <p className="subheading">
           Designing wasn’t a linear career; these were my stepping stones.
         </p>
       </div>
-      <div className="mx-auto w-full">
+      <div className="mx-auto w-full sm:flex sm:justify-center">
         <Timeline />
       </div>
     </>

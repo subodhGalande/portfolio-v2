@@ -40,12 +40,12 @@ const ProjectCard = () => {
 
   return (
     <>
-      <div className="mt-11 w-full max-w-7xl flex mx-auto flex-col justify-center gap-10 sm:gap-y-16 sm:flex-row sm:flex flex-wrap sm:mt-20 sm:w-3/4 sm:h-screen">
+      <div className="mt-11 w-full max-w-7xl flex mx-auto flex-col justify-center gap-10 sm:gap-y-12 sm:flex-row sm:flex flex-wrap sm:mt-14 md:w-full sm:h-full sm:w-3/4">
         {" "}
         {projects.map((project, index) => (
           <div
             key={index}
-            className="h-1/2 w-full gap-y-4 flex flex-col sm:w-[38rem] sm:h-auto"
+            className="h-1/2 w-full gap-y-4 flex flex-col sm:w-[40%] sm:h-auto"
           >
             <img
               src={project.img}

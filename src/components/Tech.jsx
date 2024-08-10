@@ -39,7 +39,7 @@ const Techstack = () => {
   ];
   return (
     <>
-      <div className="flex lg:w-full lg:h-screen flex-col justify-center items-center mb-24 text-grey">
+      <div className="flex sm:w-full sm:h-screen flex-col justify-center items-center mb-24 text-grey">
         <h1 className="heading">
           SPENT A FORTUNE ON COFFEE TO Learn THESE
           <strong className="text-white"> Skills</strong>.

@@ -2,7 +2,6 @@ import { LuMail } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { SiWellfound } from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
-import { ShootingStars, StarsBackground } from "./ui/shooting-stars";
 
 const Footer = () => {
   return (

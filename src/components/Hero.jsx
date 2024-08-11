@@ -11,12 +11,12 @@ const Hero = () => {
           </p>
 
           <h1 className="text-4xl  sm:text-7xl max-w-3xl mx-auto font-bold uppercase font-heading leading-9 tracking-tight sm:tracking-normal ">
-            I bring ideas to life with
-            <strong className="text-white"> code</strong>.
+            I Weave Your Dreams into
+            <strong className="text-white"> Digital Wonders</strong>.
           </h1>
           <p className="text-base sm:text-lg max-w-2xl mx-auto pb-5 sm:pb-10 leading-6 ">
-            I'm a 24-year-old UI/UX designer with over 5 years of experience in
-            creating and maintaining design systems.
+            I’m a 24-Year-Old Developer with a Year of Experience, Blending
+            Creativity and Code to Shape Unique Web Adventures
           </p>
           <button className="btn-primary sm:text-xl sm:px-7 sm:py-3 w-fit mx-auto  ">
             Download Resume

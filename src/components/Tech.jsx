@@ -41,11 +41,11 @@ const Techstack = () => {
     <>
       <div className="flex sm:w-full sm:h-screen flex-col justify-center items-center mb-24 text-grey">
         <h1 className="heading">
-          SPENT A FORTUNE ON COFFEE TO Learn THESE
-          <strong className="text-white"> Skills</strong>.
+          Chai and Code: The Secret Ingredients to{" "}
+          <strong className="text-white"> My Tech Stack</strong> Superpowers.
         </h1>
         <p className="subheading">
-          Here are few of my projects, feel free to share your feedbacks.
+          The Essential Tech Stack That Powers My Development Skills
         </p>
 
         <div className="flex flex-wrap gap-8 justify-center mt-10 sm:mt-16">

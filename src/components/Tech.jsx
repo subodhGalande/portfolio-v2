@@ -54,7 +54,7 @@ const Techstack = () => {
               key={index}
               className=" flex flex-col justify-center items-center"
             >
-              <div className=" rounded-full flex justify-center items-center bg-white/5 h-28 w-28 sm:h-32 sm:w-32">
+              <div className=" rounded-full backdrop-blur-xl flex justify-center items-center bg-white/5 h-28 w-28 sm:h-32 sm:w-32">
                 {tech.logo}
               </div>
               <p className="text-center sm:text-lg font-heading font-medium text-sm mt-2">

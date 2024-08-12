@@ -80,18 +80,30 @@ const Timeline = () => {
           ))}
         </ol> */}
         <ul className=" flex flex-col ">
-          <li className=" pl-10 relative border-l border-white/20 w-full sm:w-1/2 sm:self-end sm:px-14 ">
-            <div className=" absolute flex items-center justify-center w-4 h-4 bg-white brightness-50  rounded-full -start-2 mt-2 ring-black ring-8 "></div>{" "}
-            <div className="flex flex-col gap-4">
+          <li className=" pl-10 relative border-l-2 border-grey/10 w-full sm:w-1/2 sm:self-end sm:px-14 ">
+            <div className=" absolute flex items-center justify-center w-4 h-4 bg-white rounded-full -inset-2 mt-2  "></div>{" "}
+            <div className=" absolute flex items-center justify-center w-6 h-6 bg-white  rounded-full -left-3 -top-3 blur-sm mt-2 animate-pulse "></div>{" "}
+            <div className="flex flex-col gap-4 -mt-2">
               <h3 className=" font-sans font-medium text-2xl text-white md:text-3xl">
                 Open to work
               </h3>
-              <div className="flex flex-row items-center gap-2 mb-2">
-                <button className=" btn-primary self-stretch "> Resume </button>
-                <button className=" btn-icon self-stretch bg-grey ">
+              <div className="flex flex-row self-stretch items-center gap-2 mb-2">
+                <a
+                  href="/Subodh Galande.pdf"
+                  download="Subodh Galande"
+                  className=" btn-primary self-center "
+                >
                   {" "}
-                  <FaLinkedinIn className="h-5 w-6" />{" "}
-                </button>
+                  Resume{" "}
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/subodh-galande/"
+                  className=" btn-icon flex self-stretch bg-grey "
+                >
+                  {" "}
+                  <FaLinkedinIn className="h-6 self-center w-6" />{" "}
+                </a>
               </div>
               <p className=" font-sans text-base mb-6 text-grey md:text-lg">
                 Surrounded with Web 3 people, excited to work in same domain. If
@@ -103,21 +115,21 @@ const Timeline = () => {
           {experiences.map((exp, index) => (
             <li
               key={index}
-              className={`w-full relative pl-10 border-l sm:border-0 last:border-0 
+              className={`w-full relative pl-10 mt-3 border-l-2 sm:border-0 last:border-0 
          ${
            index % 2 === 0
-             ? `sm:border-r sm:text-right`
-             : `sm:border-l sm:self-end`
-         }  sm:w-1/2 sm:px-14  border-white/20`}
+             ? `sm:border-r-2 sm:text-right`
+             : `sm:border-l-2 sm:self-end `
+         }  sm:w-1/2 sm:px-14  border-grey/10`}
             >
               <div
                 className={`${
                   index % 2 === 0
-                    ? `  absolute mt-2 items-center justify-center w-4 h-4 bg-white brightness-50 -start-2 sm:start-auto rounded-full sm:-end-[.6rem]`
-                    : ` absolute mt-2 items-center justify-center w-4 h-4 bg-white brightness-50  -start-2 rounded-full sm:-start-[.5rem] sm:visible`
-                }  ring-black ring-8 `}
+                    ? `  absolute mt-2 items-center justify-center w-4 h-4 bg-white brightness-50 -inset-2 sm:start-auto rounded-full sm:-inset-2`
+                    : ` absolute mt-2 items-center justify-center w-4 h-4 bg-white brightness-50  -inset-2 rounded-full sm:-inset-2 sm:visible`
+                }  `}
               ></div>{" "}
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 -mt-2">
                 <h3 className=" font-sans font-medium text-2xl text-white md:text-3xl">
                   {exp.role}
                 </h3>

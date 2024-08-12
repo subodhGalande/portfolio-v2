@@ -21,9 +21,13 @@ const Hero = () => {
             I’m a 24-Year-Old Developer with a Year of Experience, Blending
             Creativity and Code to Shape Unique Web Adventures
           </p>
-          <button className="btn-primary sm:text-xl sm:px-7 sm:py-3 w-fit mx-auto  ">
+          <a
+            href="/Subodh Galande.pdf"
+            download="Subodh Galande"
+            className="btn-primary sm:text-base sm:px-7 sm:py-3 w-fit mx-auto  "
+          >
             Download Resume
-          </button>
+          </a>
         </article>
       </main>
     </>

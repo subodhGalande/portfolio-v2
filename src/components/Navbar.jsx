@@ -17,12 +17,12 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`z-10 fixed md:w-3/4 lg:w-1/2 mx-auto top-0 left-0 right-0 bg-white/5 backdrop-blur-lg w-11/12 max-w-6xl px-8 py-4 sm:py-2 rounded-xl my-4 sm:mt-10 text-white`}
+        className={`z-10 fixed md:w-3/4 lg:w-1/2 mx-auto top-0 left-0 right-0 bg-white/5 backdrop-blur-xl w-11/12 max-w-6xl px-8 py-4 sm:py-2 rounded-xl my-4 sm:mt-10 text-white`}
       >
         <div className="flex justify-between items-center">
           <a
             href="#home"
-            className="text-xl font-semibold bg-black p-2 sm:ml-3 rounded-lg font-heading"
+            className="text-xl font-semibold bg-black px-2 py-1 sm:ml-3 rounded-lg font-heading"
           >
             SG
           </a>
@@ -30,7 +30,7 @@ const Navbar = () => {
             {links.map((link, index) => (
               <a
                 href={link.path}
-                className="sm:text-lg font-medium  text-grey "
+                className=" hover:text-white duration-300 text-grey "
                 key={index}
               >
                 {" "}
@@ -64,8 +64,8 @@ const Navbar = () => {
           <nav className=" md:hidden relative w-full  text-grey pt-2 rounded-xl flex justify-between items-center">
             <div className=" flex flex-col gap-y-7 mt-5 mb-5 justify-center px-2 h-11/12">
               {links.map((item, index) => (
-                <a href={item.path} key={index} className="text-base">
-                  {item.name}
+                <a href={item.path} key={index} className="text-base ">
+                  <button onClick={toggleMenu}> {item.name} </button>
                 </a>
               ))}
               <a

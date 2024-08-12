@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <footer
         id="connect"
-        className="mx-auto flex flex-col gap-4 sm:gap-5 py-10 px-7 mt-44 rounded-xl w-11/12 h-auto bg-white/5 sm:flex-row xl:w-3/5 sm:px-12"
+        className=" scroll-m-48 mx-auto relative flex flex-col gap-4 sm:gap-5 py-10 px-7 mt-44 rounded-xl w-11/12 h-auto bg-white/5 backdrop-blur-xl sm:flex-row xl:w-3/5 sm:px-12"
       >
         <h1 className="text-center font-heading font-bold text-5xl text-grey uppercase sm:text-left lg:text-6xl sm:self-center">
           <strong className="text-white">Thanks</strong> for the visit!
@@ -23,11 +23,17 @@ const Footer = () => {
             Feel free to reach out!
           </p>
           <span className="flex gap-2 justify-center sm:justify-start lg:gap-4">
-            <button className="btn-icon">
-              {" "}
+            <a href="mailto:subodh.dsgn@gmail.com" className="btn-icon">
               <LuMail className="w-7 h-6" />{" "}
-            </button>
-            <button className="btn-primary"> Resume </button>
+            </a>
+            <a
+              href="/Subodh Galande.pdf"
+              download="Subodh Galande"
+              className="btn-primary"
+            >
+              {" "}
+              Resume{" "}
+            </a>
           </span>
         </div>
         <div className="flex mt-3 gap-2 flex-col justify-center text-center">
@@ -39,17 +45,29 @@ const Footer = () => {
             Drop a follow, I won’t spam your feed. I promise!
           </p>
           <div className="flex justify-center gap-x-2 lg:gap-x-4 mt-4 sm:justify-start">
-            <button className="btn-icon">
+            <a
+              href="https://github.com/subodhGalande"
+              target="_blank"
+              className="btn-icon"
+            >
               {" "}
               <FaGithub className="w-6 h-6" />
-            </button>
-            <button className="btn-icon">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/subodh-galande/"
+              className="btn-icon"
+              target="_blank"
+            >
               <FaLinkedinIn className="w-6 h-6" />
-            </button>
-            <button className="btn-icon">
+            </a>
+            <a
+              href="https://wellfound.com/u/subodh-galande"
+              className="btn-icon"
+              target="_blank"
+            >
               {" "}
               <SiWellfound className="w-6 h-6" />
-            </button>
+            </a>
           </div>
         </div>
       </footer>

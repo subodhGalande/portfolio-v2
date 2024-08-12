@@ -3,22 +3,22 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 const experiences = [
   {
-    role: "Design Lead",
-    orgName: "NFT Project",
-    duration: "(Jan '24 - Mar '24)",
-    desc: "Surrounded with Web 3 people, excited to work in same domain. If Web 2, remote opportunities with product-focused teams makes me smile.",
+    role: "Software Engineer",
+    orgName: "Capgemini",
+    duration: "( Dec '22 - Jan '24 )",
+    desc: "Develop and maintain high-quality JavaScript and React code, collaborating across teams. Strong skills in debugging, API integration, version control with Git, and ensuring adherence to code quality standards.",
   },
   {
-    role: "Design Lead",
-    orgName: "NFT Project",
-    duration: "(Jan '24 - Mar '24)",
-    desc: "Surrounded with Web 3 people, excited to work in same domain. If Web 2, remote opportunities with product-focused teams makes me smile.",
+    role: "Java Trainee Intern",
+    orgName: "Amstech Inc.",
+    duration: "( Oct '19 - Oct '19 )",
+    desc: "Completed the 'Amstech Academic Development Program' focused on Java Technology, gaining a strong foundation in Java fundamentals, corporate ethics, and development practices, while applying coding principles in real-world scenarios to enhance professional effectiveness.",
   },
   {
-    role: "Design Lead",
-    orgName: "NFT Project",
-    duration: "(Jan '24 - Mar '24)",
-    desc: "Surrounded with Web 3 people, excited to work in same domain. If Web 2, remote opportunities with product-focused teams makes me smile.",
+    role: "Visual Content Development Intern ",
+    orgName: "Neuratech Innovations",
+    duration: "( May '18 - Aug '18 )",
+    desc: "Collaborated with the Product Development Team, using Adobe Illustrator, Photoshop, and After Effects to create impactful designs. Translated complex ideas into visually engaging content that resonated with target audiences and drove engagement.",
   },
 ];
 
@@ -125,7 +125,7 @@ const Timeline = () => {
                   {exp.orgName} {exp.duration}
                 </h2>
 
-                <p className=" font-sans text-base mb-6 text-grey md:text-lg">
+                <p className=" max-w-xl font-sans text-base mb-6 text-grey md:text-lg">
                   {exp.desc}
                 </p>
               </div>

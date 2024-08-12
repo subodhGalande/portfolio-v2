@@ -1,7 +1,10 @@
 const Hero = () => {
   return (
     <>
-      <main className=" h-screen w-full flex justify-center items-center">
+      <main
+        id="home"
+        className=" h-screen w-full flex justify-center items-center"
+      >
         <article className="flex sm:mt-20 gap-4 sm:gap-5 flex-col justify-between text-grey text-center">
           <p className="text-base sm:text-lg">
             Hey,{" "}

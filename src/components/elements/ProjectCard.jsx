@@ -1,3 +1,6 @@
+import { FiExternalLink } from "react-icons/fi";
+import { PiGithubLogo } from "react-icons/pi";
+
 const ProjectCard = () => {
   const projects = [
     {
@@ -58,6 +61,16 @@ const ProjectCard = () => {
             <h1 className="font-sans leading-8 -mt-2 font-normal text-2xl sm:text-3xl">
               {project.desc}
             </h1>
+            <div className="flex gap-x-5">
+              <button>
+                {" "}
+                <PiGithubLogo className=" h-6 w-6 text-grey" />{" "}
+              </button>
+              <button>
+                {" "}
+                <FiExternalLink className=" h-5 w-5 text-grey" />{" "}
+              </button>
+            </div>
           </div>
         ))}
       </div>

@@ -3,7 +3,10 @@ import ProjectCard from "./elements/ProjectCard";
 const Projects = () => {
   return (
     <>
-      <div className="flex flex-col justify-between mt-44 text-grey">
+      <div
+        id="projects"
+        className="flex scroll-m-40 flex-col justify-between mt-44 text-grey"
+      >
         <h1 className="heading">
           I Dreamed of Documenting
           <strong className="text-white"> My Projects</strong> LIKE THIS.

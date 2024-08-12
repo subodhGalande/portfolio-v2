@@ -6,7 +6,10 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <footer className="mx-auto flex flex-col gap-4 sm:gap-5 py-10 px-7 mt-44 rounded-xl w-11/12 h-auto bg-white/5 sm:flex-row xl:w-3/5 sm:px-12">
+      <footer
+        id="connect"
+        className="mx-auto flex flex-col gap-4 sm:gap-5 py-10 px-7 mt-44 rounded-xl w-11/12 h-auto bg-white/5 sm:flex-row xl:w-3/5 sm:px-12"
+      >
         <h1 className="text-center font-heading font-bold text-5xl text-grey uppercase sm:text-left lg:text-6xl sm:self-center">
           <strong className="text-white">Thanks</strong> for the visit!
         </h1>

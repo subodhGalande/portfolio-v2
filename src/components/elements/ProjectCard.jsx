@@ -8,7 +8,6 @@ const ProjectCard = () => {
       title: "NFT landing page",
       desc: "Web3: NFT Landing page design concept",
       links: {
-        github: "link",
         direct: "link",
       },
     },
@@ -18,7 +17,6 @@ const ProjectCard = () => {
       desc: "Web3: NFT Landing page design concept",
       links: {
         github: "link",
-        direct: "link",
       },
     },
     {
@@ -61,15 +59,22 @@ const ProjectCard = () => {
             <h1 className="font-sans leading-8 -mt-2 font-normal text-2xl sm:text-3xl">
               {project.desc}
             </h1>
-            <div className="flex gap-x-5">
-              <button>
-                {" "}
-                <PiGithubLogo className=" h-6 w-6 text-grey" />{" "}
-              </button>
-              <button>
-                {" "}
-                <FiExternalLink className=" h-5 w-5 text-grey" />{" "}
-              </button>
+            <div className="flex justify-between">
+              <div className="flex gap-4">
+                {project.links.github && (
+                  <button>
+                    {" "}
+                    <PiGithubLogo className=" h-6 w-6 text-grey" />{" "}
+                  </button>
+                )}
+
+                {project.links.direct && (
+                  <button>
+                    {" "}
+                    <FiExternalLink className=" h-6 w-6 text-grey" />{" "}
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         ))}

@@ -23,73 +23,71 @@
   }
 }
 
-@keyframes randomMove1 {
+@keyframes rotateMove1 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) rotate(0deg);
   }
   25% {
-    transform: translate(30vw, 20vh); /* Stay within the viewport */
+    transform: translate(30vw, 20vh) rotate(90deg); /* Move and rotate */
   }
   50% {
-    transform: translate(60vw, 70vh); /* Stay within the viewport */
+    transform: translate(50vw, 50vh) rotate(180deg); /* Move and rotate */
   }
   75% {
-    transform: translate(20vw, 40vh); /* Stay within the viewport */
+    transform: translate(20vw, 40vh) rotate(270deg); /* Move and rotate */
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) rotate(360deg); /* Move and rotate */
   }
 }
 
-.animate-random-move-1 {
-  animation: randomMove1 50s infinite ease-in-out;
+.animate-rotate-move-1 {
+  animation: rotateMove1 40s infinite ease-in-out;
 }
 
-/* Animation for Circle 2 */
-@keyframes randomMove2 {
+@keyframes rotateMove2 {
   0% {
-    transform: translate(50vw, 50vh);
+    transform: translate(100vw, 100vh) rotate(0deg);
   }
   20% {
-    transform: translate(40vw, 30vh); /* Stay within the viewport */
+    transform: translate(0vw, 0vh) rotate(-90deg); /* Move and rotate */
   }
   40% {
-    transform: translate(10vw, 70vh); /* Stay within the viewport */
+    transform: translate(20vw, 100vh) rotate(-180deg); /* Move and rotate */
   }
   60% {
-    transform: translate(20vw, 60vh); /* Stay within the viewport */
+    transform: translate(70vw, -70vh) rotate(-270deg); /* Move and rotate */
   }
   80% {
-    transform: translate(20vw, 20vh); /* Stay within the viewport */
+    transform: translate(10vw, 0vh) rotate(-360deg); /* Move and rotate */
   }
   100% {
-    transform: translate(50vw, 50vh);
+    transform: translate(0vw, 0vh) rotate(-450deg); /* Move and rotate */
   }
 }
 
-.animate-random-move-2 {
-  animation: randomMove2 40s infinite ease-in-out;
+.animate-rotate-move-2 {
+  animation: rotateMove2 40s infinite ease-in-out;
 }
 
-/* Animation for Circle 3 */
-@keyframes randomMove3 {
+@keyframes rotateMove3 {
   0% {
-    transform: translate(50vw, 50vh);
+    transform: translate(0vw, 100vh) rotate(0deg);
   }
   30% {
-    transform: translate(50vw, 10vh); /* Stay within the viewport */
+    transform: translate(90vw, 10vh) rotate(120deg); /* Move and rotate */
   }
   60% {
-    transform: translate(20vw, 60vh); /* Stay within the viewport */
+    transform: translate(0vw, 0vh) rotate(240deg); /* Move and rotate */
   }
   90% {
-    transform: translate(40vw, 20vh); /* Stay within the viewport */
+    transform: translate(70vw, 100vh) rotate(360deg); /* Move and rotate */
   }
   100% {
-    transform: translate(50vw, 50vh);
+    transform: translate(0vw, 100vh) rotate(480deg); /* Move and rotate */
   }
 }
 
-.animate-random-move-3 {
-  animation: randomMove3 30s infinite ease-in-out;
+.animate-rotate-move-3 {
+  animation: rotateMove3 40s infinite ease;
 }

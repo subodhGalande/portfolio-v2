@@ -4,7 +4,7 @@ import { FaGitAlt, FaLinux } from "react-icons/fa6";
 
 import { RiTailwindCssFill } from "react-icons/ri";
 
-import { TbBrandFramerMotion } from "react-icons/tb";
+// import { TbBrandFramerMotion } from "react-icons/tb";
 
 const Techstack = () => {
   const technologies = [
@@ -32,10 +32,10 @@ const Techstack = () => {
       title: "Linux",
       logo: <FaLinux className="w-11 h-10 sm:w-14 sm:h-12" />,
     },
-    {
-      title: "Framer Motion",
-      logo: <TbBrandFramerMotion className="w-10 h-10 sm:w-12 sm:h-12" />,
-    },
+    // {
+    //   title: "Framer Motion",
+    //   logo: <TbBrandFramerMotion className="w-10 h-10 sm:w-12 sm:h-12" />,
+    // },
   ];
   return (
     <>

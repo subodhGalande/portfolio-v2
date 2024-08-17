@@ -4,38 +4,32 @@ import { PiGithubLogo } from "react-icons/pi";
 const ProjectCard = () => {
   const projects = [
     {
-      img: "/nft.png",
+      img: "/SBMOverseas.png",
       title: "NFT landing page",
       desc: "Web3: NFT Landing page design concept",
       links: {
-        direct: "link",
+        direct: "https://sbmoverseas.vercel.app/",
+        github: "https://github.com/subodhGalande/sbmoverseas",
       },
+      tech: "javascript React Tailwind CSS",
     },
     {
-      img: "/nft.png",
+      img: "/OneDesk.png",
       title: "NFT landing page",
       desc: "Web3: NFT Landing page design concept",
       links: {
-        github: "link",
+        github: "https://github.com/subodhGalande/OneDesk",
       },
+      tech: "javascript Bulma CSS PHP MySQL",
     },
     {
-      img: "/nft.png",
+      img: "/stoxticker.png",
       title: "NFT landing page",
       desc: "Web3: NFT Landing page design concept",
       links: {
-        github: "link",
-        direct: "link",
+        github: "https://github.com/subodhGalande/stoxticker",
       },
-    },
-    {
-      img: "/nft.png",
-      title: "NFT landing page",
-      desc: "Web3: NFT Landing page design concept",
-      links: {
-        github: "link",
-        direct: "link",
-      },
+      tech: "javascript React Ionic Framework",
     },
   ];
 
@@ -62,17 +56,17 @@ const ProjectCard = () => {
             <div className="flex justify-between">
               <div className="flex gap-4">
                 {project.links.github && (
-                  <button>
+                  <a href={project.links.github} target="_blank">
                     {" "}
                     <PiGithubLogo className=" h-6 w-6 text-grey" />{" "}
-                  </button>
+                  </a>
                 )}
 
                 {project.links.direct && (
-                  <button>
+                  <a href={project.links.direct} target="_blank">
                     {" "}
                     <FiExternalLink className=" h-6 w-6 text-grey" />{" "}
-                  </button>
+                  </a>
                 )}
               </div>
             </div>

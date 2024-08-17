@@ -10,10 +10,10 @@
 }
 @layer components {
   .btn-primary {
-    @apply py-3 px-8 sm:text-lg bg-grey text-black text-base uppercase font-semibold rounded-xl;
+    @apply py-3 px-8 sm:text-lg bg-grey text-black text-base uppercase font-semibold rounded-xl hover:scale-95 hover:bg-white duration-500;
   }
   .btn-icon {
-    @apply py-3 px-3 bg-grey text-black rounded-xl;
+    @apply py-3 px-3 bg-grey text-black rounded-xl hover:scale-95 hover:bg-white duration-500;
   }
   .heading {
     @apply text-4xl text-center  md:text-6xl max-w-3xl mx-auto font-bold uppercase font-heading leading-9 tracking-tight sm:tracking-normal;

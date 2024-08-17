@@ -40,7 +40,7 @@ const ProjectCard = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="h-1/2 w-full gap-y-4 flex flex-col sm:w-[40%] sm:h-auto"
+            className="h-1/2 w-full gap-y-4 flex flex-col sm:w-[35%] sm:h-auto"
           >
             <img
               src={project.img}
@@ -58,14 +58,14 @@ const ProjectCard = () => {
                 {project.links.github && (
                   <a href={project.links.github} target="_blank">
                     {" "}
-                    <PiGithubLogo className=" h-5 w-5 sm:w-6 sm:h-6 text-grey" />{" "}
+                    <PiGithubLogo className=" h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-500" />{" "}
                   </a>
                 )}
 
                 {project.links.direct && (
                   <a href={project.links.direct} target="_blank">
                     {" "}
-                    <FiExternalLink className=" h-5 w-5 sm:w-6 sm:h-6 text-grey" />{" "}
+                    <FiExternalLink className=" h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-500" />{" "}
                   </a>
                 )}
               </div>
@@ -75,7 +75,7 @@ const ProjectCard = () => {
             </div>
           </div>
         ))}
-        <div className="h-1/2 w-full brightness-50 gap-y-4 flex flex-col sm:w-[40%] sm:h-auto">
+        <div className="h-1/2 w-full brightness-50 gap-y-4 flex flex-col sm:w-[35%] sm:h-auto">
           <img className="rounded-xl sm:rounded-3xl" alt="" src="Motor.jpg" />
           <h2 className="font-sans text-sm text-grey sm:text-lg ">
             Work In Progress

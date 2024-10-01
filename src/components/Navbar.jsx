@@ -2,6 +2,8 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useLenis } from "lenis/react";
+
 const Navbar = () => {
   const links = [
     { name: "Projects", path: "#projects" },
@@ -13,6 +15,8 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const lenis = useLenis();
 
   return (
     <>
@@ -28,14 +32,21 @@ const Navbar = () => {
           </a>
           <div className="hidden md:flex w-2/3 justify-around ">
             {links.map((link, index) => (
-              <a
-                href={link.path}
-                className=" hover:text-white duration-300 text-grey "
+              <button
                 key={index}
+                onClick={() => {
+                  lenis?.scrollTo(link.path, {
+                    offset: -150,
+                  });
+                }}
               >
-                {" "}
-                {link.name}{" "}
-              </a>
+                <a
+                  href={link.path}
+                  className=" hover:text-white duration-300 text-grey "
+                >
+                  {link.name}
+                </a>
+              </button>
             ))}
             <a
               href="https://www.linkedin.com/in/subodh-galande/"

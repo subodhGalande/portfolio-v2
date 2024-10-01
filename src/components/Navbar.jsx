@@ -11,9 +11,15 @@ const Navbar = () => {
     { name: "Connect", path: "#connect" },
   ];
   const [isOpen, setIsOpen] = useState(false);
+  const scrollTo = (link) => {
+    lenis?.scrollTo(link, {
+      offset: -150,
+    });
+  };
 
-  const toggleMenu = () => {
+  const toggleMenu = (link) => {
     setIsOpen(!isOpen);
+    scrollTo(link);
   };
 
   const lenis = useLenis();
@@ -32,14 +38,7 @@ const Navbar = () => {
           </a>
           <div className="hidden md:flex w-2/3 justify-around ">
             {links.map((link, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  lenis?.scrollTo(link.path, {
-                    offset: -150,
-                  });
-                }}
-              >
+              <button key={index} onClick={() => scrollTo(link.path)}>
                 <a
                   href={link.path}
                   className=" hover:text-white duration-300 text-grey "
@@ -76,7 +75,10 @@ const Navbar = () => {
             <div className=" flex flex-col gap-y-7 mt-5 mb-5 justify-center px-2 h-11/12">
               {links.map((item, index) => (
                 <a href={item.path} key={index} className="text-base ">
-                  <button onClick={toggleMenu}> {item.name} </button>
+                  <button onClick={() => toggleMenu(item.path)}>
+                    {" "}
+                    {item.name}{" "}
+                  </button>
                 </a>
               ))}
               <a

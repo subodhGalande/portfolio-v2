@@ -5,6 +5,16 @@ import { FaLock } from "react-icons/fa";
 const ProjectCard = () => {
   const projects = [
     {
+      img: "/ai.png",
+      title: "Landing Page",
+      desc: "AI Startup: Cutting-Edge Landing Page for AI-Driven SEO Platform",
+      links: {
+        direct: "https://aistartup.netlify.app/",
+        github: "https://github.com/subodhGalande/AI-Startup-Landing-Page",
+      },
+      tech: "javascript React Tailwind CSS GSAP",
+    },
+    {
       img: "/SBMOverseas.png",
       title: "Landing Page",
       desc: "SBM Overseas: Freelance landing site project",
@@ -76,7 +86,7 @@ const ProjectCard = () => {
           </div>
         ))}
         <div className="h-1/2 w-full brightness-50 gap-y-4 flex flex-col sm:w-[35%] sm:h-auto">
-          <img className="rounded-xl sm:rounded-3xl" alt="" src="Motor.jpg" />
+          <img className="rounded-xl sm:rounded-3xl" alt="" src="Motor.webp" />
           <h2 className="font-sans text-sm text-grey sm:text-lg ">
             Work In Progress
           </h2>

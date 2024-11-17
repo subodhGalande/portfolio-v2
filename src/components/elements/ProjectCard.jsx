@@ -5,6 +5,16 @@ import { FaLock } from "react-icons/fa";
 const ProjectCard = () => {
   const projects = [
     {
+      img: "/flavorfind.png",
+      title: "Interactive Web Application",
+      desc: "FlavorFind: Interactive Recipe Explorer",
+      links: {
+        direct: "https://flavor-find.vercel.app/",
+        github: "https://github.com/subodhGalande/flavorFind",
+      },
+      tech: "javascript React Axios Tailwind-CSS RESTful-API",
+    },
+    {
       img: "/ai.png",
       title: "Landing Page",
       desc: "AI Startup: Cutting-Edge Landing Page for AI-Driven SEO Platform",

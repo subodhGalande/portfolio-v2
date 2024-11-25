@@ -56,43 +56,45 @@ const ProjectCard = () => {
 
   return (
     <>
-      <div className="mt-11 w-full max-w-7xl flex mx-auto flex-col justify-center gap-10 sm:gap-y-12 sm:flex-row sm:flex flex-wrap sm:mt-14 md:w-full sm:h-full sm:w-3/4">
+      <div className="mt-11 w-full max-w-7xl flex mx-auto flex-col justify-center gap-10 sm:gap-y-16 sm:flex-row sm:flex flex-wrap sm:mt-14 md:w-full sm:h-full sm:w-3/4">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="h-1/2 w-full gap-y-4 flex flex-col sm:w-[35%] sm:h-auto"
-          >
-            <img
-              src={project.img}
-              className="rounded-xl sm:rounded-3xl"
-              alt=""
-            />
-            <h2 className="font-sans text-sm text-grey sm:text-lg ">
-              {project.title}
-            </h2>
-            <h1 className="font-sans leading-8 -mt-2 font-normal text-2xl sm:text-3xl">
-              {project.desc}
-            </h1>
-            <div className="flex mt-2 sm:mt-6 justify-between">
-              <div className="flex gap-4 justify-around">
-                {project.links.github && (
-                  <a href={project.links.github} target="_blank">
-                    {" "}
-                    <PiGithubLogo className=" h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-500" />{" "}
-                  </a>
-                )}
-
-                {project.links.direct && (
-                  <a href={project.links.direct} target="_blank">
-                    {" "}
-                    <FiExternalLink className=" h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-500" />{" "}
-                  </a>
-                )}
-              </div>
-              <h1 className="font-mono text-grey text-[.5rem] sm:text-xs self-center">
-                {project.tech}
+          <div key={index} className="h-1/2  text-left block w-full gap-y-4 flex flex-col sm:w-[35%] sm:h-auto">
+               <a href={project.links.direct && project.links.direct ? project.links.direct : project.links.github} target="_blank">
+                <div>
+                 <img
+                  src={project.img}
+                  className="rounded-xl hover:scale-[102%] duration-150 w-full sm:rounded-3xl"
+                  alt="image Project"/>
+                  </div>
+               </a>
+              
+              <h2 className="font-sans text-sm text-grey sm:text-lg ">
+                {project.title}
+              </h2>
+              <h1 className="font-sans leading-8 -mt-2 font-normal text-2xl sm:text-3xl">
+                {project.desc}
               </h1>
-            </div>
+              <h1 className="font-mono text-left text-grey text-[.5rem] sm:text-xs ">
+                  {project.tech}
+                </h1>
+              <div className="flex mt-2  w-full  justify-between">
+                <div className="flex gap-4 justify-around">
+                  {project.links.github && (
+                    <a href={project.links.github} target="_blank">
+                      {" "}
+                      <PiGithubLogo className=" h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-500" />{" "}
+                    </a>
+                  )}
+                  {project.links.direct && (
+                    <a href={project.links.direct} target="_blank">
+                      {" "}
+                      <FiExternalLink className=" h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-500" />{" "}
+                    </a>
+                  )}
+                </div>
+              
+              </div>
+            
           </div>
         ))}
         <div className="h-1/2 w-full brightness-50 gap-y-4 flex flex-col sm:w-[35%] sm:h-auto">

@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
           <a
             href="/Subodh Galande.pdf"
-            download="Subodh Galande"
+            download="Subodh Galande - Resume"
             className="btn-primary sm:text-base sm:px-7 sm:py-3 w-fit mx-auto  "
           >
             Download Resume

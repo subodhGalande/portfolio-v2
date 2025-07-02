@@ -3,6 +3,12 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 const experiences = [
   {
+    role: "Web Developer",
+    orgName: "Web Monk",
+    duration: "( Jan '24 - present )",
+    desc: "Built responsive web apps with React, blending functionality with engaging UI. Collaborated with clients to turn ideas into effective products, mentored interns, and developed a customer data dashboard that cut effort by 20%.",
+  },
+  {
     role: "Software Engineer",
     orgName: "Capgemini",
     duration: "( Dec '22 - Jan '24 )",
@@ -90,7 +96,7 @@ const Timeline = () => {
               <div className="flex flex-row self-stretch items-center gap-2 mb-2">
                 <a
                   href="/Subodh Galande.pdf"
-                  download="Subodh Galande"
+                  download="Subodh Galande - Resume"
                   className=" btn-primary self-center "
                 >
                   {" "}
@@ -106,9 +112,9 @@ const Timeline = () => {
                 </a>
               </div>
               <p className=" font-sans text-base mb-6 text-grey md:text-lg">
-                Surrounded with Web 3 people, excited to work in same domain. If
-                Web 2, remote opportunities with product-focused teams makes me
-                smile.
+                Open to work as a DRI, ready to take ownership and drive
+                meaningful products. Looking to join a team that values good
+                design and getting things done.
               </p>
             </div>
           </li>

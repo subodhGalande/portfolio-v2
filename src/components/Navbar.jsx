@@ -3,6 +3,7 @@ import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useLenis } from "lenis/react";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   const links = [
@@ -47,14 +48,24 @@ const Navbar = () => {
                 </a>
               </button>
             ))}
-            <a
-              href="https://www.linkedin.com/in/subodh-galande/"
-              target="_blank"
-              className="text-white"
-            >
+            <span className="flex items-center justify-between gap-x-6">
               {" "}
-              <FaLinkedinIn className="w-6 h-6" />{" "}
-            </a>
+              <a
+                href="https://www.linkedin.com/in/subodh-galande/"
+                target="_blank"
+                className="text-white"
+              >
+                {" "}
+                <FaLinkedinIn className="w-7 h-7" />{" "}
+              </a>
+              <a
+                href="https://x.com/sub_0dh"
+                target="_blank"
+                className="text-white"
+              >
+                <FaXTwitter className="w-6 h-6" />
+              </a>
+            </span>
           </div>
 
           <button
@@ -87,7 +98,16 @@ const Navbar = () => {
                 className="text-grey flex gap-x-2 items-center"
               >
                 {" "}
-                <FaLinkedinIn className=" text-white w-5 h-5 -mt-1" /> LinkedIn{" "}
+                <FaLinkedinIn className=" text-white w-5 h-5 -mt-1" />{" "}
+                LinkedIn{" "}
+              </a>
+              <a
+                href="https://x.com/sub_0dh"
+                target="_blank"
+                className="text-grey flex gap-x-2 items-center"
+              >
+                <FaXTwitter className=" text-white w-5 h-5 -mt-1" />
+                Twitter
               </a>
             </div>
           </nav>

@@ -1,3 +1,20 @@
+const DOB = new Date("2000-08-21");
+
+function getAge() {
+  const today = new Date();
+  let age = today.getFullYear() - DOB.getFullYear();
+
+  const hasBirthdayPassed =
+    today.getMonth() > DOB.getMonth() ||
+    (today.getMonth() === DOB.getMonth() && today.getDate() >= DOB.getDate());
+
+  if (!hasBirthdayPassed) {
+    age--;
+  }
+
+  return age;
+}
+
 const Hero = () => {
   return (
     <>
@@ -18,8 +35,8 @@ const Hero = () => {
             <strong className="text-white"> Digital Wonders</strong>.
           </h1>
           <p className="text-base sm:text-lg max-w-2xl mx-auto pb-5 sm:pb-10 leading-6 ">
-            I’m a 24-Year-Old Developer with a Year of Experience, Blending
-            Creativity and Code to Shape Unique Web Adventures
+            I’m a {getAge()}-Year-Old Developer with a Year of Experience,
+            Blending Creativity and Code to Shape Unique Web Adventures
           </p>
           <a
             href="/Subodh Galande.pdf"

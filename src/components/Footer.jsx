@@ -1,7 +1,7 @@
 import { LuMail } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
-import { SiWellfound } from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -11,8 +11,7 @@ const Footer = () => {
         className=" scroll-m-48 mx-auto relative flex flex-col gap-4 sm:gap-5 py-10 px-7 mt-44 rounded-xl w-11/12 h-auto bg-white/5 backdrop-blur-xl sm:flex-row xl:w-3/5 sm:px-12"
       >
         <h1 className="text-center font-heading font-bold text-5xl text-grey uppercase sm:text-left lg:text-6xl sm:self-center">
-          <strong className="text-white">That’s a Wrap</strong> Thanks for
-          Stopping In!
+          <strong className="text-white">Thanks</strong> for Stopping In!
         </h1>
 
         <div className="flex mt-3 text-center justify-center flex-col gap-4">
@@ -37,7 +36,7 @@ const Footer = () => {
             </a>
           </span>
         </div>
-        <div className="flex mt-3 gap-2 flex-col justify-center text-center">
+        <div className="flex mt-3 mx-auto gap-y-2 flex-col self-start justify-center text-center">
           <h2 className="text-base font-medium sm:text-left lg:text-lg">
             {" "}
             Stay with me!{" "}
@@ -45,7 +44,7 @@ const Footer = () => {
           <p className="text-sm text-grey font-medium sm:text-left lg:text-base">
             Hit follow if you’re curious{" "}
           </p>
-          <div className="flex justify-center gap-x-2 lg:gap-x-4 mt-4 sm:justify-start">
+          <div className="flex  justify-center gap-2 lg:gap-x-4 mt-4 sm:justify-start">
             <a
               href="https://github.com/subodhGalande"
               target="_blank"
@@ -61,13 +60,14 @@ const Footer = () => {
             >
               <FaLinkedinIn className="w-6 h-6" />
             </a>
+
             <a
-              href="https://wellfound.com/u/subodh-galande"
+              href="https://x.com/sub_0dh"
               className="btn-icon"
               target="_blank"
             >
               {" "}
-              <SiWellfound className="w-6 h-6" />
+              <FaXTwitter className="w-6 h-6" />
             </a>
           </div>
         </div>

@@ -134,11 +134,7 @@ const Techstack = () => {
     <section className="max-w-6xl mx-auto py-24 px-4 text-grey">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <span className="text-xs font-mono uppercase tracking-widest text-grey border border-white/10 px-3.5 py-1.5 rounded-full bg-white/5 inline-flex items-center gap-2">
-          <TbRocket className="w-4 h-4 text-orange-400" />
-          Full-Stack & AI
-        </span>
-        <h2 className="heading mt-4">
+        <h2 className="heading">
           From{" "}
           <span className="relative inline-block group/coffee cursor-pointer text-white">
             Coffee Cup

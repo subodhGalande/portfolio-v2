@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FiDownload, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { TbBuildingSkyscraper, TbCheck } from "react-icons/tb";
+import { motion, AnimatePresence } from "framer-motion";
 
 const experiences = [
   {
@@ -118,7 +119,7 @@ const Timeline = () => {
 
       {/* MOBILE ACCORDION (< lg screens) */}
       <div className="lg:hidden flex flex-col gap-3">
-        <span className="text-xs font-mono text-grey uppercase tracking-wider px-1 font-semibold mb-1">
+        <span className="text-xs font-mono text-grey uppercase tracking-wider px-1 font-semibold mb-2">
           Career Chapters
         </span>
         {experiences.map((exp) => {
@@ -131,11 +132,11 @@ const Timeline = () => {
               {/* Accordion Header Button */}
               <button
                 onClick={() => toggleMobileAccordion(exp.id)}
-                className="w-full p-4 flex items-center justify-between text-left border-b border-white/5 bg-white/5"
+                className="w-full p-4 sm:p-5 flex items-center justify-between text-left border-b border-white/5 bg-white/5"
                 aria-expanded={isOpen}
               >
                 <div>
-                  <h4 className="font-heading font-bold text-base text-white">
+                  <h4 className="font-heading font-semibold text-base sm:text-lg text-white mb-1">
                     {exp.role}
                   </h4>
                   <p className="text-xs text-grey">
@@ -151,25 +152,25 @@ const Timeline = () => {
 
               {/* Accordion Expanded Body */}
               {isOpen && (
-                <div className="p-4 sm:p-5 flex flex-col gap-4 animate-fadeIn">
-                  <p className="text-xs text-grey leading-relaxed">
+                <div className="p-5 sm:p-6 flex flex-col gap-6 animate-fadeIn">
+                  <p className="text-xs sm:text-sm text-grey/90 leading-relaxed sm:leading-loose">
                     {exp.summary}
                   </p>
 
                   {/* Impact Cards Grid */}
-                  <div className="grid grid-cols-1 gap-2.5">
+                  <div className="grid grid-cols-1 gap-3">
                     {exp.keyImpacts.map((impact, iIdx) => (
                       <div
                         key={iIdx}
-                        className="p-3 rounded-xl bg-black/40 border border-white/5"
+                        className="p-3.5 sm:p-4 rounded-xl bg-black/40 border border-white/5"
                       >
-                        <div className="flex items-center gap-2 mb-1">
-                          <TbCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                          <h5 className="text-xs font-bold text-white">
+                        <div className="flex items-center gap-2.5 mb-1.5">
+                          <TbCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                          <h5 className="text-xs font-semibold text-white">
                             {impact.label}
                           </h5>
                         </div>
-                        <p className="text-[11px] text-grey leading-normal pl-5">
+                        <p className="text-xs text-grey/80 leading-relaxed pl-6.5">
                           {impact.detail}
                         </p>
                       </div>
@@ -177,15 +178,15 @@ const Timeline = () => {
                   </div>
 
                   {/* Tech Stack Badges */}
-                  <div className="pt-3 border-t border-white/10">
-                    <span className="text-[10px] font-mono uppercase text-grey font-semibold block mb-2">
+                  <div className="pt-4 border-t border-white/10">
+                    <span className="text-xs font-mono uppercase tracking-wider text-grey font-medium block mb-3">
                       Technologies & Tools
                     </span>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-2">
                       {exp.tech.map((t, tIdx) => (
                         <span
                           key={tIdx}
-                          className="px-2 py-0.5 text-xs font-mono bg-white/10 rounded text-grey border border-white/5"
+                          className="px-2.5 py-1 text-xs font-mono bg-white/10 rounded-md text-grey border border-white/5"
                         >
                           {t}
                         </span>
@@ -203,7 +204,7 @@ const Timeline = () => {
       <div className="hidden lg:grid grid-cols-12 gap-6 items-start">
         {/* Left Column: Selectable Company Sidebar */}
         <div className="col-span-4 flex flex-col gap-3">
-          <span className="text-xs font-mono text-grey uppercase tracking-wider px-2 font-semibold">
+          <span className="text-xs font-mono text-grey uppercase tracking-wider px-2 font-semibold mb-1">
             Career Chapters
           </span>
           {experiences.map((exp) => {
@@ -212,21 +213,25 @@ const Timeline = () => {
               <button
                 key={exp.id}
                 onClick={() => setActiveId(exp.id)}
-                className={`text-left p-4 rounded-xl border transition-all duration-300 relative group ${
+                className={`text-left p-4 sm:p-5 rounded-xl border transition-all duration-300 relative group ${
                   isActive
                     ? "bg-white/10 border-white/40 text-white shadow-lg"
                     : "bg-white/5 border-white/5 text-grey hover:text-white hover:bg-white/10 hover:border-white/20"
                 }`}
               >
                 {isActive && (
-                  <span className="absolute left-0 top-3 bottom-3 w-1 bg-white rounded-r-full" />
+                  <motion.span
+                    layoutId="activeSidebarChapter"
+                    className="absolute left-0 top-3 bottom-3 w-1 bg-white rounded-r-full"
+                    transition={{ type: "spring", stiffness: 350, damping: 26 }}
+                  />
                 )}
 
-                <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-heading font-bold text-base sm:text-lg">
+                <div className="flex items-start justify-between gap-2 mb-1.5">
+                  <h4 className="font-heading font-semibold text-base sm:text-lg leading-snug">
                     {exp.orgName}
                   </h4>
-                  <span className="text-[11px] font-mono text-grey">
+                  <span className="text-xs font-mono text-grey whitespace-nowrap shrink-0 pt-0.5">
                     {exp.duration}
                   </span>
                 </div>
@@ -237,67 +242,76 @@ const Timeline = () => {
         </div>
 
         {/* Right Column: Active Experience Focus Card */}
-        <div className="col-span-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 min-h-[380px] flex flex-col justify-between">
-          <div>
-            <div className="flex items-center justify-between gap-2 pb-5 border-b border-white/10 mb-5">
-              <div>
-                <span className="text-xs font-mono text-grey uppercase font-semibold inline-flex items-center gap-1.5 mb-1">
-                  <TbBuildingSkyscraper className="w-4 h-4 text-cyan-400" />
-                  {activeExp.type}
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white leading-tight">
-                  {activeExp.role}
-                </h3>
-                <p className="text-sm font-semibold text-grey mt-0.5">
-                  @ {activeExp.orgName} {activeExp.location && `• ${activeExp.location}`}
-                </p>
-              </div>
-
-              <span className="text-xs font-mono text-grey bg-white/10 px-3 py-1.5 rounded-full border border-white/10 shrink-0">
-                {activeExp.duration}
-              </span>
-            </div>
-
-            <p className="text-sm text-grey leading-relaxed mb-5">
-              {activeExp.summary}
-            </p>
-
-            <div className="grid grid-cols-2 gap-3 mb-5">
-              {activeExp.keyImpacts.map((impact, iIdx) => (
-                <div
-                  key={iIdx}
-                  className="p-3.5 rounded-xl bg-black/40 border border-white/5 hover:border-white/15 transition-colors"
-                >
-                  <div className="flex items-center gap-2 mb-1">
-                    <TbCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <h5 className="text-xs font-bold text-white truncate">
-                      {impact.label}
-                    </h5>
-                  </div>
-                  <p className="text-[11px] text-grey leading-normal pl-6">
-                    {impact.detail}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeExp.id}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="col-span-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 min-h-[420px] flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between gap-2 pb-6 border-b border-white/10 mb-6 sm:mb-7">
+                <div>
+                  <span className="text-xs font-mono text-grey uppercase font-medium inline-flex items-center gap-2 mb-2 sm:mb-2.5">
+                    <TbBuildingSkyscraper className="w-4 h-4 text-cyan-400" />
+                    {activeExp.type}
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-heading font-semibold text-white leading-tight mb-1.5">
+                    {activeExp.role}
+                  </h3>
+                  <p className="text-sm font-medium text-grey mt-1">
+                    @ {activeExp.orgName} {activeExp.location && `• ${activeExp.location}`}
                   </p>
                 </div>
-              ))}
-            </div>
-          </div>
 
-          <div className="pt-4 border-t border-white/10 mt-auto">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-grey font-semibold block mb-2">
-              Technologies & Tooling Used
-            </span>
-            <div className="flex flex-wrap gap-1.5">
-              {activeExp.tech.map((t, tIdx) => (
-                <span
-                  key={tIdx}
-                  className="px-2.5 py-1 text-xs font-mono bg-white/10 rounded-md text-grey border border-white/5"
-                >
-                  {t}
+                <span className="text-xs font-mono text-grey bg-white/10 px-3.5 py-2 rounded-full border border-white/10 shrink-0">
+                  {activeExp.duration}
                 </span>
-              ))}
+              </div>
+
+              <p className="text-sm text-grey/90 leading-relaxed sm:leading-loose mb-6 sm:mb-7">
+                {activeExp.summary}
+              </p>
+
+              <div className="grid grid-cols-2 gap-4 mb-6 sm:mb-7">
+                {activeExp.keyImpacts.map((impact, iIdx) => (
+                  <div
+                    key={iIdx}
+                    className="p-4 rounded-xl bg-black/40 border border-white/5 hover:border-white/15 transition-colors"
+                  >
+                    <div className="flex items-center gap-2.5 mb-1.5">
+                      <TbCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <h5 className="text-xs font-semibold text-white truncate">
+                        {impact.label}
+                      </h5>
+                    </div>
+                    <p className="text-xs text-grey/80 leading-relaxed pl-6.5">
+                      {impact.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
+
+            <div className="pt-5 sm:pt-6 border-t border-white/10 mt-auto">
+              <span className="text-xs font-mono uppercase tracking-wider text-grey font-medium block mb-3">
+                Technologies & Tooling Used
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {activeExp.tech.map((t, tIdx) => (
+                  <span
+                    key={tIdx}
+                    className="px-2.5 py-1 text-xs font-mono bg-white/10 rounded-md text-grey border border-white/5"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

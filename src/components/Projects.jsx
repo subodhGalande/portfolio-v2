@@ -8,7 +8,7 @@ const Projects = () => {
           Things I've Built While Supposedly{" "}
           <span className="relative inline-block group/sleep cursor-pointer text-white">
             {/* Floating Animated Zzz on Hover */}
-            <span className="absolute -top-2 right-0 flex items-baseline pointer-events-none opacity-0 group-hover/sleep:opacity-100 transition-opacity duration-300 font-mono text-grey font-semibold select-none">
+            <span className="absolute -top-1 right-0 flex items-baseline pointer-events-none opacity-0 group-hover/sleep:opacity-100 transition-opacity duration-300 font-mono text-grey font-semibold select-none">
               <span className="text-xs animate-zzz-1">z</span>
               <span className="text-sm animate-zzz-2 -ml-0.5">Z</span>
               <span className="text-base animate-zzz-3 -ml-0.5">Z</span>

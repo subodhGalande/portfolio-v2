@@ -8,7 +8,7 @@ export default {
       },
       fontFamily: {
         heading: ["Outfit", "Arial", "Helvetica", "sans-serif"],
-        sans: ["Roboto", "Arial", "Helvetica", "sans-serif"],
+        sans: ["Plus Jakarta Sans", "Arial", "Helvetica", "sans-serif"],
       },
       colors: {
         grey: "#b3b3b3",

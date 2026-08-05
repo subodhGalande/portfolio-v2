@@ -140,7 +140,7 @@ const Techstack = () => {
             Coffee Cup
             <span className="relative inline-block">
               {/* Rising Coffee Steam Whisks on Hover directly above 's' */}
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 flex gap-0.5 pointer-events-none opacity-0 group-hover/coffee:opacity-100 transition-opacity duration-300">
+              <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 flex gap-0.5 pointer-events-none opacity-0 group-hover/coffee:opacity-100 transition-opacity duration-300">
                 <span className="w-1 h-3.5 bg-gradient-to-t from-white/70 to-transparent rounded-full blur-[1px] animate-steam-1" />
                 <span className="w-1 h-4 bg-gradient-to-t from-white/60 to-transparent rounded-full blur-[1px] animate-steam-2" />
                 <span className="w-1 h-3.5 bg-gradient-to-t from-white/50 to-transparent rounded-full blur-[1px] animate-steam-3" />
@@ -148,7 +148,7 @@ const Techstack = () => {
               s
             </span>
           </span>{" "}
-          <strong className="text-white">to Autonomous AI Agents</strong>.
+          <span className="text-white">to Autonomous AI Agents</span>.
         </h2>
         <p className="subheading">
           A breakdown of my favorite web frameworks, databases, and AI coding workflows.

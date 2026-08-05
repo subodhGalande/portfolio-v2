@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Footer Top Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading">
-            Let's Make Something <strong className="text-white">Worth Shipping</strong>.
+            Let's Make Something <span className="text-white">Worth Shipping</span>.
           </h2>
           <p className="subheading">
             Looking for full-time software engineering roles. Open to interesting problems.

@@ -54,11 +54,11 @@ const Hero = () => {
         </p>
 
         {/* Clean, Minimal Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-heading font-bold text-grey leading-tight uppercase tracking-tight sm:tracking-normal">
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-heading font-semibold text-grey leading-tight tracking-tight sm:tracking-normal">
           <WordReveal text="Full-Stack Engineer Building" baseDelay={1} />{" "}
-          <strong className="text-white">
+          <span className="text-white font-semibold">
             <WordReveal text="Products That Work" baseDelay={5} />
-          </strong>
+          </span>
           .
         </h1>
 

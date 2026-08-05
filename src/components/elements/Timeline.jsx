@@ -97,18 +97,19 @@ const Timeline = () => {
                 <a
                   href="/Subodh Galande.pdf"
                   download="Subodh Galande - Resume"
-                  className=" btn-primary self-center "
+                  aria-label="Download Subodh Galande's Resume PDF"
+                  className="btn-primary self-center inline-flex items-center justify-center min-h-[44px]"
                 >
-                  {" "}
-                  Resume{" "}
+                  Resume
                 </a>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/subodh-galande/"
-                  className=" btn-icon flex self-stretch bg-grey "
+                  aria-label="Subodh Galande's LinkedIn Profile"
+                  className="btn-icon flex self-stretch bg-grey items-center justify-center min-w-[44px] min-h-[44px]"
                 >
-                  {" "}
-                  <FaLinkedinIn className="h-6 self-center w-6" />{" "}
+                  <FaLinkedinIn className="h-6 self-center w-6" />
                 </a>
               </div>
               <p className=" font-sans text-base mb-6 text-grey md:text-lg">

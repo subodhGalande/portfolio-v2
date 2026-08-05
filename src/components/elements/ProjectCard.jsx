@@ -12,7 +12,7 @@ const ProjectCard = () => {
         direct: "https://kanban-subodh.vercel.app/",
         github: "https://github.com/subodhGalande/kanban",
       },
-      tech: "Typescript Next.js dnd-kit Tailwind-CSS Prisma NeonDB PostgreSQL",
+      tech: ["TypeScript", "Next.js", "dnd-kit", "Tailwind CSS", "Prisma", "NeonDB", "PostgreSQL"],
     },
     {
       img: "/flavorfind.png",
@@ -22,7 +22,7 @@ const ProjectCard = () => {
         direct: "https://flavor-find.vercel.app/",
         github: "https://github.com/subodhGalande/flavorFind",
       },
-      tech: "javascript React Axios Tailwind-CSS RESTful-API",
+      tech: ["JavaScript", "React", "Axios", "Tailwind CSS", "RESTful API"],
     },
     {
       img: "/ai.png",
@@ -32,7 +32,7 @@ const ProjectCard = () => {
         direct: "https://aistartup.netlify.app/",
         github: "https://github.com/subodhGalande/AI-Startup-Landing-Page",
       },
-      tech: "javascript React Tailwind CSS GSAP",
+      tech: ["JavaScript", "React", "Tailwind CSS", "GSAP"],
     },
     {
       img: "/SBMOverseas.png",
@@ -42,7 +42,7 @@ const ProjectCard = () => {
         direct: "https://sbmoverseas.vercel.app/",
         github: "https://github.com/subodhGalande/sbmoverseas",
       },
-      tech: "javascript React Tailwind CSS",
+      tech: ["JavaScript", "React", "Tailwind CSS"],
     },
     {
       img: "/OneDesk.png",
@@ -51,7 +51,7 @@ const ProjectCard = () => {
       links: {
         github: "https://github.com/subodhGalande/OneDesk",
       },
-      tech: "javascript Bulma CSS PHP MySQL",
+      tech: ["JavaScript", "Bulma CSS", "PHP", "MySQL"],
     },
     {
       img: "/stoxticker.png",
@@ -60,7 +60,7 @@ const ProjectCard = () => {
       links: {
         github: "https://github.com/subodhGalande/stoxticker",
       },
-      tech: "javascript React Ionic Framework",
+      tech: ["JavaScript", "React", "Ionic Framework"],
     },
   ];
 
@@ -70,7 +70,7 @@ const ProjectCard = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="h-1/2  text-left w-full gap-y-4 flex flex-col sm:w-[35%] sm:h-auto"
+            className="h-1/2 text-left w-full gap-y-3 flex flex-col sm:w-[35%] sm:h-auto"
           >
             <a
               href={
@@ -79,60 +79,93 @@ const ProjectCard = () => {
                   : project.links.github
               }
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${project.desc} preview`}
+              className="block overflow-hidden rounded-xl sm:rounded-3xl"
             >
               <div>
                 <img
                   src={project.img}
-                  className="rounded-xl hover:scale-[102%] duration-150 w-full sm:rounded-3xl"
-                  alt="image Project"
+                  className="rounded-xl hover:scale-[102%] duration-150 w-full sm:rounded-3xl object-cover"
+                  alt={`Preview screenshot of ${project.desc}`}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </a>
 
-            <h2 className="font-sans text-sm text-grey sm:text-lg ">
+            <span className="font-sans text-xs uppercase tracking-wider text-grey sm:text-sm font-semibold mt-1">
               {project.title}
-            </h2>
-            <h1 className="font-sans leading-8 -mt-2 font-normal text-2xl sm:text-3xl">
+            </span>
+            <h3 className="font-sans leading-7 -mt-1 font-medium text-xl sm:text-2xl text-white">
               {project.desc}
-            </h1>
-            <h1 className="font-mono text-left text-grey text-[.5rem] sm:text-xs ">
-              {project.tech}
-            </h1>
-            <div className="flex mt-2  w-full  justify-between">
+            </h3>
+
+            <div className="flex flex-wrap gap-1.5 mt-1">
+              {project.tech.map((t, tIdx) => (
+                <span
+                  key={tIdx}
+                  className="px-2.5 py-1 text-xs font-mono bg-white/10 rounded-md text-grey border border-white/5"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex mt-2 w-full justify-between items-center">
               <div className="flex gap-4 justify-around">
                 {project.links.github && (
-                  <a href={project.links.github} target="_blank">
-                    {" "}
-                    <PiGithubLogo className=" h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-500" />{" "}
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${project.desc} on GitHub`}
+                    className="p-1 min-w-[36px] min-h-[36px] flex items-center justify-center"
+                  >
+                    <PiGithubLogo className="h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-300" />
                   </a>
                 )}
                 {project.links.direct && (
-                  <a href={project.links.direct} target="_blank">
-                    {" "}
-                    <FiExternalLink className=" h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-500" />{" "}
+                  <a
+                    href={project.links.direct}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${project.desc} live website`}
+                    className="p-1 min-w-[36px] min-h-[36px] flex items-center justify-center"
+                  >
+                    <FiExternalLink className="h-5 w-5 sm:w-6 sm:h-6 text-grey hover:scale-95 hover:text-white duration-300" />
                   </a>
                 )}
               </div>
             </div>
           </div>
         ))}
-        <div className="h-1/2 w-full brightness-50 gap-y-4 flex flex-col sm:w-[35%] sm:h-auto">
-          <img className="rounded-xl sm:rounded-3xl" alt="" src="Motor.webp" />
-          <h2 className="font-sans text-sm text-grey sm:text-lg ">
+        <div className="h-1/2 w-full brightness-50 gap-y-3 flex flex-col sm:w-[35%] sm:h-auto">
+          <img
+            className="rounded-xl sm:rounded-3xl"
+            alt="RevTrail motor trail preview (Work in progress)"
+            src="Motor.webp"
+            loading="lazy"
+            decoding="async"
+          />
+          <span className="font-sans text-xs uppercase tracking-wider text-grey sm:text-sm font-semibold mt-1">
             Work In Progress
-          </h2>
-          <h1 className="font-sans leading-8 -mt-2 font-normal text-2xl sm:text-3xl">
+          </span>
+          <h3 className="font-sans leading-7 -mt-1 font-medium text-xl sm:text-2xl text-white">
             RevTrail: Snap, map, and share your rides.
-          </h1>
-          <div className="flex mt-2 sm:mt-6 justify-between">
+          </h3>
+          <div className="flex mt-2 sm:mt-4 justify-between">
             <div className="flex gap-4 justify-around">
-              <a target="_blank">
-                {" "}
-                <FaLock className=" h-5 w-5 sm:w-6 sm:h-6 text-grey" />{" "}
-              </a>
+              <span
+                title="Private / In Development"
+                aria-label="Project in progress - code private"
+                className="p-1 min-w-[36px] min-h-[36px] flex items-center justify-center"
+              >
+                <FaLock className="h-5 w-5 sm:w-6 sm:h-6 text-grey" />
+              </span>
             </div>
           </div>
-        </div>{" "}
+        </div>
       </div>
     </>
   );

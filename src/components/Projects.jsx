@@ -7,10 +7,10 @@ const Projects = () => {
         id="projects"
         className="flex scroll-m-40 flex-col justify-between mt-44 text-grey"
       >
-        <h1 className="heading">
+        <h2 className="heading">
           Unveiling <strong className="text-white"> My Projects,</strong> The
           Playful Journey of Innovation and Fun.
-        </h1>
+        </h2>
         <p className="subheading">
           Here are few of my projects, feel free to share your feedbacks.
         </p>

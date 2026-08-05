@@ -18,7 +18,7 @@ const Projects = () => {
           .
         </h2>
         <p className="subheading">
-          From full-stack web apps and AI tools to side projects built for fun.
+          Production apps, AI integrations, and things I built because I couldn't find a better tool.
         </p>
       </div>
 

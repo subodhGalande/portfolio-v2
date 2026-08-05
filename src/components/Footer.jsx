@@ -25,10 +25,10 @@ const Footer = () => {
         {/* Footer Top Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading">
-            Let's Build Something <strong className="text-white">Exceptional</strong>.
+            Let's Make Something <strong className="text-white">Worth Shipping</strong>.
           </h2>
           <p className="subheading">
-            Open for full-time software engineering roles, product development, and technical collaboration.
+            Looking for full-time software engineering roles. Open to interesting problems.
           </p>
         </div>
 
@@ -148,7 +148,7 @@ const Footer = () => {
       {/* Footer Copyright Line */}
       <div className="w-full text-center py-8 relative z-10">
         <p className="text-xs sm:text-sm font-mono text-grey/70">
-          © {new Date().getFullYear()} Subodh Galande. All rights reserved. Built with React & Tailwind CSS.
+          © {new Date().getFullYear()} Subodh Galande. Made with too much coffee and not enough sleep.
         </p>
       </div>
     </>

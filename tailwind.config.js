@@ -7,8 +7,8 @@ export default {
         "hero-height": "calc(100vh - 10rem)",
       },
       fontFamily: {
-        heading: "Author, ui-serif",
-        sans: "Roboto, ui-serif",
+        heading: ["Outfit", "Arial", "Helvetica", "sans-serif"],
+        sans: ["Roboto", "Arial", "Helvetica", "sans-serif"],
       },
       colors: {
         grey: "#b3b3b3",

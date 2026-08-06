@@ -9,6 +9,8 @@ import {
   SiNodedotjs,
   SiAnthropic,
   SiGoogle,
+  SiReactquery,
+  SiVercel,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -35,6 +37,11 @@ const expertiseDomains = [
         title: "TypeScript",
         role: "Type-Safe Application Code",
         logo: <SiTypescript className="w-5 h-5 text-blue-400" />,
+      },
+      {
+        title: "TanStack Query",
+        role: "Async State & Data Fetching",
+        logo: <SiReactquery className="w-6 h-6 text-rose-400" />,
       },
       {
         title: "JavaScript",
@@ -87,6 +94,11 @@ const expertiseDomains = [
     subtitle: "Leveraging Next-Gen AI Agents & Coding Tools",
     description: "Accelerating feature delivery, code reviews, and system refactoring with autonomous AI tools.",
     items: [
+      {
+        title: "Vercel AI SDK",
+        role: "LLM Streaming & AI Integrations",
+        logo: <SiVercel className="w-5 h-5 text-white" />,
+      },
       {
         title: "Google Antigravity",
         role: "Autonomous AI Agentic Coding",

@@ -13,7 +13,7 @@ const filterCategories = [
 const projects = [
   {
     id: "postpilot",
-    name: "PostPilot",
+    name: "PostPilot AI",
     img: "/postpilot.png",
     category: "fullstack",
     title: "Full-Stack Web Application",
@@ -22,7 +22,7 @@ const projects = [
       direct: "https://postpilot-labs.vercel.app/",
       github: "https://github.com/subodhGalande/PostPilot-AI",
     },
-    tech: ["TypeScript", "Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
+    tech: ["TypeScript", "Next.js", "Vercel AI SDK", "TanStack Query", "Tailwind CSS", "Prisma", "PostgreSQL"],
   },
   {
     id: "kanban",
@@ -35,7 +35,7 @@ const projects = [
       direct: "https://kanban-subodh.vercel.app/",
       github: "https://github.com/subodhGalande/kanban",
     },
-    tech: ["TypeScript", "Next.js", "dnd-kit", "Tailwind CSS", "Prisma", "NeonDB", "PostgreSQL"],
+    tech: ["TypeScript", "Next.js", "TanStack Query", "dnd-kit", "Tailwind CSS", "Prisma", "NeonDB", "PostgreSQL"],
   },
   {
     id: "flavorfind",

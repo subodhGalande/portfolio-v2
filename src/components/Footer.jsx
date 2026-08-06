@@ -1,81 +1,157 @@
 import { LuMail } from "react-icons/lu";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FiDownload } from "react-icons/fi";
+import { useLenis } from "lenis/react";
 
 const Footer = () => {
+  const lenis = useLenis();
+
+  const handleNavClick = (target) => {
+    if (lenis) {
+      lenis.scrollTo(target, { offset: -100 });
+    } else {
+      const el = document.querySelector(target);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.location.hash = target;
+      }
+    }
+  };
+
   return (
     <>
-      <footer
-        id="connect"
-        className=" scroll-m-48 mx-auto relative flex flex-col gap-4 sm:gap-5 py-10 px-7 mt-44 rounded-xl w-11/12 h-auto bg-white/5 backdrop-blur-xl sm:flex-row xl:w-3/5 sm:px-12"
-      >
-        <h1 className="text-center font-heading font-bold text-5xl text-grey uppercase sm:text-left lg:text-6xl sm:self-center">
-          <strong className="text-white">Thanks</strong> for Stopping In!
-        </h1>
-
-        <div className="flex mt-3 text-center justify-center flex-col gap-4">
-          <p className=" text-sm font-medium leading-5 text-grey md:text-left lg:text-base">
-            Looks like we’re both looking for something. Let’s connect and make
-            it happen!
-          </p>
-          <p className=" text-grey text-sm  font-medium text-center sm:text-left lg:text-base">
-            Feel free to reach out!
-          </p>
-          <span className="flex gap-2 justify-center sm:justify-start lg:gap-4">
-            <a href="mailto:subodh.dsgn@gmail.com" className="btn-icon">
-              <LuMail className="w-7 h-6" />{" "}
-            </a>
-            <a
-              href="/Subodh Galande.pdf"
-              download="Subodh Galande - Resume"
-              className="btn-primary"
-            >
-              {" "}
-              Resume{" "}
-            </a>
-          </span>
-        </div>
-        <div className="flex mt-3 mx-auto gap-y-2 flex-col self-start justify-center text-center">
-          <h2 className="text-base font-medium sm:text-left lg:text-lg">
-            {" "}
-            Stay with me!{" "}
+      <footer id="connect" className="scroll-m-24 pt-28 sm:pt-32 text-grey max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
+        {/* Footer Top Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="heading">
+            Let's Make Something <span className="text-white">Worth Shipping</span>.
           </h2>
-          <p className="text-sm text-grey font-medium sm:text-left lg:text-base">
-            Hit follow if you’re curious{" "}
+          <p className="subheading">
+            Looking for full-time software engineering roles. Open to interesting problems.
           </p>
-          <div className="flex  justify-center gap-2 lg:gap-x-4 mt-4 sm:justify-start">
-            <a
-              href="https://github.com/subodhGalande"
-              target="_blank"
-              className="btn-icon"
-            >
-              {" "}
-              <FaGithub className="w-6 h-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/subodh-galande/"
-              className="btn-icon"
-              target="_blank"
-            >
-              <FaLinkedinIn className="w-6 h-6" />
-            </a>
+        </div>
 
-            <a
-              href="https://x.com/sub_0dh"
-              className="btn-icon"
-              target="_blank"
-            >
-              {" "}
-              <FaXTwitter className="w-6 h-6" />
-            </a>
+        {/* 3-Column Minimalist Content Grid */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 py-12 border-t border-b border-white/10 relative z-20">
+          {/* Column 1: Direct Contact & Resume */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-sm font-mono uppercase tracking-wider text-white font-bold">
+              Contact & Resume
+            </h3>
+            <p className="text-xs sm:text-sm text-grey leading-relaxed">
+              Have an open position or project in mind? Reach out directly via email or check my resume.
+            </p>
+
+            <div className="flex flex-wrap gap-2.5 mt-2">
+              <a
+                href="mailto:subodh.dsgn@gmail.com"
+                aria-label="Send email to Subodh Galande"
+                className="px-4 py-2.5 text-xs font-semibold bg-white text-black rounded-lg hover:bg-neutral-200 transition-colors inline-flex items-center gap-2"
+              >
+                <LuMail className="w-4 h-4" /> Say Hello
+              </a>
+              <a
+                href="https://drive.google.com/uc?export=download&id=1fZSwBGsNSvEkerUuPyo72ix-kWMIw0ry"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Subodh Galande's Resume PDF"
+                className="px-4 py-2.5 text-xs font-medium text-grey hover:text-white bg-white/5 hover:bg-white/10 rounded-lg border border-white/10 transition-colors inline-flex items-center gap-2"
+              >
+                <FiDownload className="w-4 h-4" /> Resume
+              </a>
+            </div>
+          </div>
+
+          {/* Column 2: Quick Navigation */}
+          <div className="flex flex-col gap-3 md:pl-8 relative z-30">
+            <h3 className="text-sm font-mono uppercase tracking-wider text-white font-bold mb-1">
+              Navigation
+            </h3>
+            <ul className="space-y-2 text-xs sm:text-sm">
+            <li>
+              <button
+                type="button"
+                onClick={() => handleNavClick("#projects")}
+                className="hover:text-white transition-colors cursor-pointer text-left py-1 text-grey block w-full"
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                onClick={() => handleNavClick("#exp")}
+                className="hover:text-white transition-colors cursor-pointer text-left py-1 text-grey block w-full"
+              >
+                Work
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                onClick={() => handleNavClick("#connect")}
+                className="hover:text-white transition-colors cursor-pointer text-left py-1 text-grey block w-full"
+              >
+                Connect
+              </button>
+            </li>
+          </ul>
+          </div>
+
+          {/* Column 3: Social Profiles */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-sm font-mono uppercase tracking-wider text-white font-bold">
+              Social Profiles
+            </h3>
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://github.com/subodhGalande"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Subodh Galande's GitHub Profile"
+                className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 text-xs text-grey hover:text-white flex items-center justify-between transition-colors"
+              >
+                <span className="flex items-center gap-2">
+                  <FaGithub className="w-4 h-4 text-white" /> GitHub
+                </span>
+                <span className="font-mono text-[11px] text-grey">@subodhGalande</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/subodh-galande/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Subodh Galande's LinkedIn Profile"
+                className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 text-xs text-grey hover:text-white flex items-center justify-between transition-colors"
+              >
+                <span className="flex items-center gap-2">
+                  <FaLinkedinIn className="w-4 h-4 text-blue-400" /> LinkedIn
+                </span>
+                <span className="font-mono text-[11px] text-grey">subodh-galande</span>
+              </a>
+              <a
+                href="https://x.com/sub_0dh"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Subodh Galande's X (Twitter) Profile"
+                className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 text-xs text-grey hover:text-white flex items-center justify-between transition-colors"
+              >
+                <span className="flex items-center gap-2">
+                  <FaXTwitter className="w-4 h-4 text-white" /> X (Twitter)
+                </span>
+                <span className="font-mono text-[11px] text-grey">@sub_0dh</span>
+              </a>
+            </div>
           </div>
         </div>
       </footer>
-      <p className="text-base font-medium text-grey text-center pt-44 pb-5">
-        {" "}
-        © 2025 Subodh Galande. All rights reserved.{" "}
-      </p>
+
+      {/* Footer Copyright Line */}
+      <div className="w-full text-center py-10 sm:py-12 px-4 sm:px-6 relative z-10">
+        <p className="text-xs sm:text-sm font-mono text-grey/70">
+          © {new Date().getFullYear()} Subodh Galande. Made with too much coffee and not enough sleep.
+        </p>
+      </div>
     </>
   );
 };

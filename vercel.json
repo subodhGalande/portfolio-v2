@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/resume",
+      "destination": "https://drive.google.com/uc?export=download&id=1fZSwBGsNSvEkerUuPyo72ix-kWMIw0ry",
+      "permanent": false
+    }
+  ]
+}

@@ -7,6 +7,12 @@
     @apply bg-black;
     @apply text-white;
   }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  p, blockquote, li {
+    text-wrap: pretty;
+  }
 }
 @layer components {
   .btn-primary {
@@ -16,10 +22,10 @@
     @apply py-3 px-3 bg-grey text-black rounded-xl hover:scale-95 hover:bg-white duration-500;
   }
   .heading {
-    @apply text-4xl text-center  md:text-6xl max-w-3xl mx-auto font-bold uppercase font-heading leading-9 tracking-tight sm:tracking-normal;
+    @apply text-4xl text-center md:text-6xl max-w-3xl mx-auto font-semibold font-heading leading-tight tracking-tight sm:tracking-normal text-balance;
   }
   .subheading {
-    @apply text-lg leading-7 md:text-xl max-w-3xl mx-auto text-center pt-5;
+    @apply text-base sm:text-lg leading-7 max-w-2xl mx-auto text-center pt-5 text-grey/80 text-pretty;
   }
 }
 
@@ -91,3 +97,92 @@
 .animate-rotate-move-3 {
   animation: rotateMove3 40s infinite ease;
 }
+
+@keyframes coffeeSteam {
+  0% {
+    transform: translateY(2px) scaleX(0.7);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-12px) scaleX(1.4);
+    opacity: 0;
+  }
+}
+
+.animate-steam-1 {
+  animation: coffeeSteam 2s ease-in-out infinite;
+}
+.animate-steam-2 {
+  animation: coffeeSteam 2.4s ease-in-out 0.3s infinite;
+}
+.animate-steam-3 {
+  animation: coffeeSteam 1.9s ease-in-out 0.6s infinite;
+}
+
+@keyframes floatZzz {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(8px, -12px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-zzz-1 {
+  animation: floatZzz 1.8s ease-in-out infinite;
+}
+.animate-zzz-2 {
+  animation: floatZzz 2.1s ease-in-out 0.3s infinite;
+}
+.animate-zzz-3 {
+  animation: floatZzz 2.4s ease-in-out 0.6s infinite;
+}
+
+@keyframes snapBreak {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  35% {
+    transform: rotate(14deg) translateY(4px);
+  }
+  65% {
+    transform: rotate(9deg) translateY(2px);
+  }
+  100% {
+    transform: rotate(11deg) translateY(3px);
+  }
+}
+
+.group\/break:hover .snap-break-word {
+  animation: snapBreak 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ─── Hero Overdrive ───────────────────────────────── */
+
+/* Words start hidden; WAAPI fills them forwards */
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+}
+
+/* CTA button fade-up entrance */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

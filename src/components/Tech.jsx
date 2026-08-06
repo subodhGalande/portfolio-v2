@@ -12,7 +12,7 @@ import {
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { TbServerBolt, TbSparkles, TbTerminal2, TbRocket } from "react-icons/tb";
+import { TbServerBolt, TbTerminal2 } from "react-icons/tb";
 
 const expertiseDomains = [
   {

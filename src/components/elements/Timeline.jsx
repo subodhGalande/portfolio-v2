@@ -81,27 +81,28 @@ const Timeline = () => {
   const activeExp = experiences.find((e) => e.id === activeId) || experiences[0];
 
   return (
-    <div className="max-w-5xl mx-auto my-6 px-4">
+    <div className="max-w-5xl mx-auto my-6">
       {/* Availability Banner */}
-      <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <span className="text-xs font-mono uppercase tracking-wider text-emerald-400 inline-flex items-center gap-2 mb-1">
+      <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-6">
+        <div className="flex flex-col gap-1.5 sm:gap-2">
+          <span className="text-xs font-mono uppercase tracking-wider text-emerald-400 inline-flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
             Available for Full-Time Roles
           </span>
-          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+          <h3 className="text-lg sm:text-2xl font-heading font-bold text-white leading-snug">
             Open to New Opportunities
           </h3>
-          <p className="text-xs sm:text-sm text-grey mt-0.5">
+          <p className="text-xs sm:text-sm text-grey/90 leading-relaxed">
             Looking for Full-Stack or Frontend Software Engineer positions.
           </p>
         </div>
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-3 shrink-0 flex-wrap sm:flex-nowrap">
           <a
-            href="/Subodh Galande.pdf"
-            download="Subodh Galande - Resume"
+            href="https://drive.google.com/uc?export=download&id=1fZSwBGsNSvEkerUuPyo72ix-kWMIw0ry"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Download Subodh Galande's Resume PDF"
-            className="px-3.5 py-2 text-xs font-semibold bg-white text-black rounded-lg hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
+            className="px-4 py-2.5 text-xs font-semibold bg-white text-black rounded-lg hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
           >
             <FiDownload className="w-3.5 h-3.5" /> Resume
           </a>
@@ -110,7 +111,7 @@ const Timeline = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Subodh Galande's LinkedIn Profile"
-            className="px-3.5 py-2 text-xs font-medium text-grey hover:text-white bg-white/5 hover:bg-white/10 rounded-lg border border-white/10 transition-colors inline-flex items-center gap-1.5"
+            className="px-4 py-2.5 text-xs font-medium text-grey hover:text-white bg-white/5 hover:bg-white/10 rounded-lg border border-white/10 transition-colors inline-flex items-center gap-1.5"
           >
             <FaLinkedinIn className="w-3.5 h-3.5" /> LinkedIn
           </a>

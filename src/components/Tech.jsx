@@ -131,7 +131,7 @@ const expertiseDomains = [
 
 const Techstack = () => {
   return (
-    <section className="max-w-6xl mx-auto py-24 px-4 text-grey">
+    <section className="max-w-6xl mx-auto py-20 sm:py-24 px-4 sm:px-6 md:px-8 lg:px-12 text-grey">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="heading">
@@ -164,23 +164,23 @@ const Techstack = () => {
               <div className="hidden lg:block absolute left-8 top-full h-10 w-0.5 border-l-2 border-dashed border-white/20 z-0" />
             )}
 
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8 relative z-0">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-8 relative z-0">
               {/* Domain Header Bar */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-white/10">
-                <div className="flex items-center gap-4">
-                  <span className="font-mono text-sm text-white/50 font-bold bg-white/5 px-3 py-1 rounded-lg border border-white/5">
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 lg:gap-8 pb-5 sm:pb-6 mb-5 sm:mb-6 border-b border-white/10">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 lg:gap-5">
+                  <span className="self-start sm:self-auto font-mono text-xs sm:text-sm text-emerald-400 font-semibold bg-emerald-500/10 px-3 py-1.5 rounded-xl border border-emerald-500/20 shrink-0">
                     DOMAIN {domain.domainNumber}
                   </span>
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                  <div className="min-w-0">
+                    <h3 className="text-lg sm:text-2xl font-heading font-bold text-white leading-snug">
                       {domain.domainName}
                     </h3>
-                    <p className="text-xs sm:text-sm text-grey mt-0.5">
+                    <p className="text-xs sm:text-sm font-medium text-grey/90 mt-1">
                       {domain.subtitle}
                     </p>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm text-grey/80 max-w-xs sm:text-right">
+                <p className="text-xs sm:text-sm text-grey/80 leading-relaxed lg:max-w-xs lg:text-right">
                   {domain.description}
                 </p>
               </div>

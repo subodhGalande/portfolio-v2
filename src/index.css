@@ -185,23 +185,4 @@
   }
 }
 
-/* Direction C: scroll-driven parallax exit — Chrome/Edge/Safari only */
-/* Falls back to static hero on Firefox without any visible breakage     */
-@supports (animation-timeline: scroll()) {
-  .hero-article {
-    animation: heroScrollExit linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0vh 45vh;
-  }
 
-  @keyframes heroScrollExit {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(-60px);
-    }
-  }
-}

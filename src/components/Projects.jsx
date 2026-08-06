@@ -2,7 +2,7 @@ import ProjectCard from "./elements/ProjectCard";
 
 const Projects = () => {
   return (
-    <section id="projects" className="scroll-m-40 pt-32 text-grey max-w-7xl mx-auto px-4">
+    <section id="projects" className="scroll-m-40 pt-28 sm:pt-32 text-grey max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h2 className="heading">
           Things I've Built While Supposedly{" "}

@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="z-50 fixed md:w-3/4 lg:w-1/2 mx-auto top-0 left-0 right-0 bg-white/5 backdrop-blur-2xl shadow-2xl shadow-black/50 w-11/12 max-w-6xl px-6 sm:px-8 py-3 sm:py-2.5 rounded-2xl my-4 sm:mt-10 text-white transition-all duration-300"
+        className="z-50 fixed md:w-3/4 lg:w-1/2 mx-auto top-0 left-0 right-0 bg-white/5 backdrop-blur-2xl shadow-2xl shadow-black/50 w-[calc(100%-2rem)] sm:w-11/12 max-w-6xl px-4 sm:px-6 md:px-8 py-3 sm:py-2.5 rounded-2xl my-3 sm:mt-8 text-white transition-all duration-300"
       >
         <div className="flex justify-between items-center">
           {/* Brand Logo Badge */}
@@ -41,9 +41,13 @@ const Navbar = () => {
               scrollTo("#home");
             }}
             aria-label="Subodh Galande Home"
-            className="text-lg font-bold font-heading bg-black border border-white/15 px-3 py-1.5 rounded-xl text-white hover:bg-white hover:text-black transition-all duration-300 shadow-sm"
+            className="flex items-center justify-center transition-transform hover:scale-105"
           >
-            SG
+            <img
+              src="/logo.png"
+              alt="Subodh Galande Logo"
+              className="h-8 sm:h-9 w-auto object-contain rounded-xl"
+            />
           </a>
 
           {/* Desktop Links & Socials */}

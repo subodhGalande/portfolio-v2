@@ -12,7 +12,7 @@ function App() {
     <>
       <Animation />
       <Navbar />
-      <div className="px-7 relative">
+      <div className="relative z-10">
         <Hero />
         <Techstack />
         <Projects />

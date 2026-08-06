@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer id="connect" className="scroll-m-24 pt-32 text-grey max-w-7xl mx-auto px-4 relative z-10">
+      <footer id="connect" className="scroll-m-24 pt-28 sm:pt-32 text-grey max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
         {/* Footer Top Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading">
@@ -52,8 +52,9 @@ const Footer = () => {
                 <LuMail className="w-4 h-4" /> Say Hello
               </a>
               <a
-                href="/Subodh Galande.pdf"
-                download="Subodh Galande - Resume"
+                href="https://drive.google.com/uc?export=download&id=1fZSwBGsNSvEkerUuPyo72ix-kWMIw0ry"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Download Subodh Galande's Resume PDF"
                 className="px-4 py-2.5 text-xs font-medium text-grey hover:text-white bg-white/5 hover:bg-white/10 rounded-lg border border-white/10 transition-colors inline-flex items-center gap-2"
               >
@@ -146,7 +147,7 @@ const Footer = () => {
       </footer>
 
       {/* Footer Copyright Line */}
-      <div className="w-full text-center py-8 relative z-10">
+      <div className="w-full text-center py-10 sm:py-12 px-4 sm:px-6 relative z-10">
         <p className="text-xs sm:text-sm font-mono text-grey/70">
           © {new Date().getFullYear()} Subodh Galande. Made with too much coffee and not enough sleep.
         </p>

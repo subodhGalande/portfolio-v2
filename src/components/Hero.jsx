@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <main
       id="home"
-      className="hero-section h-screen w-full flex justify-center items-center px-4"
+      className="hero-section min-h-screen w-full flex justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 py-20"
     >
       <article
         ref={articleRef}
@@ -69,8 +69,9 @@ const Hero = () => {
 
         {/* Clean Resume CTA */}
         <a
-          href="/Subodh Galande.pdf"
-          download="Subodh Galande - Resume"
+          href="https://drive.google.com/uc?export=download&id=1fZSwBGsNSvEkerUuPyo72ix-kWMIw0ry"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Download Subodh Galande's Resume PDF"
           className="btn-primary sm:text-base sm:px-8 sm:py-3.5 mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition-transform hover:scale-95"
           style={{
